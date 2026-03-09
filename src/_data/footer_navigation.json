@@ -1,0 +1,20 @@
+{
+  "items": [
+    {
+      "text": "Investors",
+      "url": "/investors/"
+    },
+    {
+      "text": "Partners",
+      "url": "/partners/"
+    },
+    {
+      "text": "Governance",
+      "url": "/governance/"
+    },
+    {
+      "text": "FAQs",
+      "url": "/faqs/"
+    }
+  ]
+}

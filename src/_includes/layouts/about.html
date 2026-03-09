@@ -1,0 +1,71 @@
+{% extends "layouts/base.html" %}
+
+{% set pageHeaderTitle = title %}
+{% set serviceFaqs = collections.faqs | filterFaqsByCategory("about") %}
+
+{% block content %}
+
+<div class="layout" data-layout="mek-quake">
+
+<div>
+<h1>{{ title }}</h1>
+{% if lede %}{{ lede | markdown | safe }}{% endif %}
+{{ block1 | markdown | safe }}
+</div><!-- one -->
+
+<div>
+{{ block2 | markdown | safe }}
+</div><!-- two -->
+
+</div><!-- layout -->
+
+
+
+<figure>
+{% include "svgs/panel-4.svg" %}
+</figure>
+
+
+
+<div class="layout" data-layout="mek-quake">
+
+<div>
+{{ block3 | markdown | safe }}
+</div><!-- one -->
+
+<div>
+{{ block4 | markdown | safe }}
+</div><!-- two -->
+
+</div><!-- layout -->
+
+
+
+<figure>
+{% include "svgs/panel-3.svg" %}
+</figure>
+
+
+
+<div class="layout" data-layout="joe-pineapples">
+
+<div>
+
+{% if serviceFaqs.length %}
+<div>
+<h2>Frequently asked questions</h2>
+
+{% for faqItem in serviceFaqs %}
+<details>
+<summary>{{ faqItem.data.question }}</summary>
+<p>{{ faqItem.data.answer }}</p>
+</details>
+{% endfor %}
+</div><!-- one -->
+{% endif %}
+
+</div><!-- one -->
+
+</div><!-- layout -->
+
+{% endblock %}

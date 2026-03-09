@@ -1,0 +1,59 @@
+{% extends "layouts/base.html" %}
+
+{% set pageHeaderTitle = title %}
+
+{% block content %}
+
+<div class="layout" data-layout="mad-ronn">
+
+<div>
+<h1>{{ title }}</h1>
+{{ section1 | markdown | safe }}
+</div><!-- one -->
+
+</div><!-- layout -->
+
+
+
+<h2>Our group</h2>
+
+<div class="layout" data-bordered="top" data-layout="mongrol">
+
+<div>
+{{ block1 | markdown | safe }}
+</div><!-- one -->
+
+<div>
+{{ block2 | markdown | safe }}
+</div><!-- two -->
+
+<div>
+{{ block3 | markdown | safe }}
+</div><!-- three -->
+
+</div><!-- layout -->
+
+
+
+<h2>Our partners</h2>
+
+<div class="layout" data-bordered="top" data-layout="mongrol">
+
+<div>
+{{ block4 | markdown | safe }}
+</div><!-- one -->
+
+<div>
+{{ block5 | markdown | safe }}
+</div><!-- two -->
+
+<div>
+{{ block6 | markdown | safe }}
+</div><!-- three -->
+
+</div><!-- layout -->
+
+
+
+
+{% endblock %}

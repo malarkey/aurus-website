@@ -1,0 +1,25 @@
+{
+  "items": [
+    {
+      "text": "About",
+      "url": "/about/"
+    },
+    {
+      "text": "Investors",
+      "url": "/investors/"
+    },
+    {
+      "text": "Insights",
+      "url": "/insights/"
+    },
+    {
+      "text": "Contact",
+      "url": "/contact/"
+    },
+    {
+      "text": "Sign in",
+      "url": "/",
+      "class": "btn"
+    }
+  ]
+}

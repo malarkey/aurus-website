@@ -1,0 +1,62 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+
+<div class="layout" data-layout="ro-jaws">
+
+<div>
+<h1>{{ title }}</h1>
+
+<form action="/thanks/" class="contact-form" data-netlify="true" method="POST" name="contact-form" netlify-honeypot="bot-field">
+<input type="hidden" name="form-name" value="contact-form">
+<p hidden>
+<label>Don&#8217;t fill this out: <input name="bot-field"></label>
+</p>
+
+<div data-layout="flex">
+
+<div>
+<label for="contact-name">Name</label>
+<input type="text" name="contact-name" id="contact-name">
+</div><!-- one -->
+
+<div>
+<label for="contact-company">Company <span>Optional</span></label>
+<input type="text" name="contact-company" id="contact-company">
+</div><!-- two -->
+
+</div><!-- layout -->
+
+<div data-layout="flex">
+
+<div>
+<label for="contact-email">Email</label>
+<input type="email" name="contact-email" id="contact-email">
+</div><!-- one -->
+
+<div>
+<label for="contact-tel">Phone</label>
+<input type="tel" name="contact-tel" id="contact-tel">
+</div><!-- two -->
+
+</div><!-- layout -->
+
+<div>
+<label for="contact-message">Message</label>
+<textarea name="contact-message" id="contact-message"></textarea>
+</div>
+
+<div data-align-h="right">
+<button class="btn">Send message</button>
+</div><!-- align -->
+
+</form>
+</div><!-- one -->
+
+<div>
+<img src="/images/img-contact-1.webp" alt="{{ title }}">
+</div><!-- two -->
+
+</div><!-- layout -->
+
+{% endblock %}

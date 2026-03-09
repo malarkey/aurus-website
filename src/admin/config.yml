@@ -1,0 +1,168 @@
+backend:
+  name: git-gateway
+  branch: main
+publish_mode: editorial_workflow
+media_folder: "src/images"
+public_folder: "/images"
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "Homepage"
+        name: "home"
+        file: "src/index.md"
+        fields:
+          - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/home.html" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Meta description", name: "metaDesc", widget: "text", required: false }
+          - { label: "Feature image", name: "featureImage", widget: "image", required: false }
+          - { label: "Feature image caption", name: "featureImageCaption", widget: "string", required: false }
+          - { label: "Intro", name: "lede", widget: "markdown", required: false }
+          - { label: "Sidebar", name: "aside", widget: "markdown", required: false }
+          - { label: "Body", name: "body", widget: "markdown", required: false }
+      - label: "About"
+        name: "about"
+        file: "src/about.md"
+        fields:
+          - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/about.html" }
+          - { label: "Permalink", name: "permalink", widget: "hidden", default: "/about/" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Meta description", name: "metaDesc", widget: "text", required: false }
+          - { label: "Feature image", name: "featureImage", widget: "image", required: false }
+          - { label: "Feature image caption", name: "featureImageCaption", widget: "string", required: false }
+          - { label: "Intro", name: "lede", widget: "markdown", required: false }
+          - { label: "Sidebar", name: "aside", widget: "markdown", required: false }
+          - { label: "Body", name: "body", widget: "markdown", required: false }
+      - label: "Contact"
+        name: "contact"
+        file: "src/contact.md"
+        fields:
+          - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/contact.html" }
+          - { label: "Permalink", name: "permalink", widget: "hidden", default: "/contact/" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Meta description", name: "metaDesc", widget: "text", required: false }
+          - { label: "Feature image", name: "featureImage", widget: "image", required: false }
+          - { label: "Feature image caption", name: "featureImageCaption", widget: "string", required: false }
+          - { label: "Intro", name: "lede", widget: "markdown", required: false }
+          - { label: "Sidebar", name: "aside", widget: "markdown", required: false }
+          - { label: "Body", name: "body", widget: "markdown", required: false }
+      - label: "Investors"
+        name: "investors"
+        file: "src/investors.md"
+        fields:
+          - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/page.html" }
+          - { label: "Permalink", name: "permalink", widget: "hidden", default: "/investors/" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Meta description", name: "metaDesc", widget: "text", required: false }
+          - { label: "Feature image", name: "featureImage", widget: "image", required: false }
+          - { label: "Feature image caption", name: "featureImageCaption", widget: "string", required: false }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Governance"
+        name: "governance"
+        file: "src/governance.md"
+        fields:
+          - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/page.html" }
+          - { label: "Permalink", name: "permalink", widget: "hidden", default: "/governance/" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Meta description", name: "metaDesc", widget: "text", required: false }
+          - { label: "Feature image", name: "featureImage", widget: "image", required: false }
+          - { label: "Feature image caption", name: "featureImageCaption", widget: "string", required: false }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Partnerships"
+        name: "partnerships"
+        file: "src/partners.md"
+        fields:
+          - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/page.html" }
+          - { label: "Permalink", name: "permalink", widget: "hidden", default: "/partnerships/" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Meta description", name: "metaDesc", widget: "text", required: false }
+          - { label: "Feature image", name: "featureImage", widget: "image", required: false }
+          - { label: "Feature image caption", name: "featureImageCaption", widget: "string", required: false }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Insights index"
+        name: "insights"
+        file: "src/blog.md"
+        fields:
+          - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/feed.html" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Meta description", name: "metaDesc", widget: "text", required: false }
+          - { label: "Intro", name: "lede", widget: "markdown", required: false }
+      - label: "Privacy policy"
+        name: "privacy"
+        file: "src/privacy.md"
+        fields:
+          - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/page.html" }
+          - { label: "Permalink", name: "permalink", widget: "hidden", default: "/privacy/" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Terms"
+        name: "terms"
+        file: "src/terms.md"
+        fields:
+          - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/page.html" }
+          - { label: "Permalink", name: "permalink", widget: "hidden", default: "/terms/" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+  - name: "posts"
+    label: "Posts"
+    folder: "src/posts"
+    create: true
+    slug: "{{slug}}"
+    preview_path: "insights/{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish date", name: "date", widget: "datetime" }
+      - { label: "Author", name: "postAuthor", widget: "string" }
+      - { label: "Summary", name: "postSummary", widget: "text" }
+      - { label: "Categories", name: "postCategories", widget: "list", allow_add: true }
+      - { label: "Tags", name: "postTags", widget: "list", allow_add: true }
+      - { label: "Body", name: "body", widget: "markdown" }
+  - name: "faqs"
+    label: "FAQs"
+    folder: "src/faqs"
+    create: true
+    slug: "faq-{{slug}}"
+    fields:
+      - { label: "Question", name: "question", widget: "string" }
+      - { label: "Answer", name: "answer", widget: "text" }
+      - label: "Categories"
+        name: "categories"
+        widget: "select"
+        multiple: true
+        options: ["about", "investor", "general"]
+      - { label: "Permalink", name: "permalink", widget: "hidden", default: false }
+  - name: "globals"
+    label: "Globals"
+    files:
+      - label: "Site data"
+        name: "site_data"
+        file: "src/_data/site.json"
+        fields:
+          - { label: "Site name", name: "name", widget: "string" }
+          - { label: "Site URL", name: "url", widget: "string" }
+          - { label: "Author name", name: "authorName", widget: "string" }
+          - { label: "Author email", name: "authorEmail", widget: "string" }
+          - { label: "Telephone", name: "telephone", widget: "string", required: false }
+          - { label: "Public email", name: "email", widget: "string", required: false }
+          - { label: "Site ID", name: "siteID", widget: "string" }
+          - { label: "Copyright owner", name: "copyrightOwner", widget: "string", required: false }
+      - label: "Main navigation"
+        name: "navigation"
+        file: "src/_data/navigation.json"
+        fields:
+          - label: "Items"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Text", name: "text", widget: "string" }
+              - { label: "URL", name: "url", widget: "string" }
+      - label: "Footer navigation"
+        name: "footer_navigation"
+        file: "src/_data/footer_navigation.json"
+        fields:
+          - label: "Items"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Text", name: "text", widget: "string" }
+              - { label: "URL", name: "url", widget: "string" }

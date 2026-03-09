@@ -1,0 +1,92 @@
+{% set assetHash = global.random() %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+{% include "partials/head.html" %}
+
+<body id="{{ site.siteID }}" data-page="{% if page.url == '/' %}home{% else %}inner{% endif %}"{% if theme %} data-theme="{{ theme }}"{% endif %}>
+
+<section class="panel-full-bleed" data-theme="reversed">
+
+<div class="layout" data-layout="happy-shrapnel">
+
+<div>
+{% include "partials/header.html" %}
+
+<div class="alt-box">
+<h1 data-visibility="hidden">{{ title }}</h1>
+{{ block1 | markdown | safe }}
+</div><!-- box -->
+</div><!-- one -->
+
+<div>
+<figure>
+<img src="/images/img-banner-1.webp" alt="{{ title }}">
+</figure>
+</div><!-- two -->
+
+</div><!-- layout -->
+
+
+
+<div class="layout" data-layout="ro-jaws">
+
+<div>
+{{ block2 | markdown | safe }}
+</div><!-- one -->
+
+<div>
+{{ block3 | markdown | safe }}
+</div><!-- two -->
+
+</div><!-- layout -->
+
+
+
+
+<div class="layout" data-bordered="top" data-layout="mongrol">
+
+<div>
+{{ block4 | markdown | safe }}
+</div><!-- one -->
+
+<div>
+{{ block5 | markdown | safe }}
+</div><!-- two -->
+
+<div>
+{{ block6 | markdown | safe }}
+</div><!-- three -->
+
+</div><!-- layout -->
+
+</section>
+
+
+
+<div id="panels">
+<div class="panel">{% include "svgs/panel-1.svg" %}</div>
+<div class="panel">{% include "svgs/panel-2.svg" %}</div>
+<div class="panel">{% include "svgs/panel-3.svg" %}</div>
+<div class="panel">{% include "svgs/panel-4.svg" %}</div>
+</div><!-- panels -->
+
+
+
+<h2 data-size="2xl">Insights</h2>
+
+<div data-content="posts">
+{% for item in collections.blog %}
+{% if loop.index <= 4 %}
+{% set postListItems = [item] %}
+{% include "partials/post-list.html" %}
+{% endif %}
+{% endfor %}
+</div>
+
+{% include "partials/footer.html" %}
+<script src="{{ site.url }}/js/scripts.js"></script>
+</body>
+
+</html>
