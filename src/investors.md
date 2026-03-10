@@ -267,7 +267,11 @@ block14: |
 
  ## Early exit option
 
- The contract period is fixed for 48 months. However, investors will have an opportunity to exit the agreement. If they choose to do so, they will keep any annual dividends paid to them up to that date, but they would forego any additional accrued payments. Thus, an investor who exits after 12 months would receive a 5% return but he/she would not be eligible to claim the additional 5% that would normally be held in accrual and paid to the investor at full term – i.e. after 4 years.
+ The contract period is fixed for 48 months. However, investors will have an opportunity to exit the agreement.
+
+ If they choose to do so, they will keep any annual dividends paid to them up to that date, but they would forego any additional accrued payments.
+
+ Thus, an investor who exits after 12 months would receive a 5% return but he/she would not be eligible to claim the additional 5% that would normally be held in accrual and paid to the investor at full term – i.e. after 4 years.
 
 block15: |
 
