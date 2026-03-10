@@ -22,12 +22,12 @@ Fluid font scale - scales between min/max viewports
 --font-size-2xl: clamp(2.0736rem, 1.7983rem + 1.2236vw, 2.7466rem);
 --font-size-3xl: clamp(2.4883rem, 2.1018rem + 1.718vw, 3.4332rem);
 
---font-weight-l: 300;
---font-weight-r: 400;
+--font-weight-l: 100;
+--font-weight-r: 300;
 --font-weight-m: 400;
 --font-weight-bd: 700;
 --font-weight-bk: 900;
---lineheight-r: 1.5;
+--lineheight-r: 1.6;
 --lineheight-s: 1.2;
 
 /* --------------------
@@ -442,6 +442,10 @@ display: inline-block; }
 
 .alt-inline li:not(:last-child) {
 margin-inline-end: var(--spacing-r); }
+
+.alt-nav li {
+display: inline-block;
+text-transform: uppercase; }
 
 /* --------------------
 TEXT-LEVEL SEMANTICS
@@ -1168,6 +1172,9 @@ display: grid;
 grid-template-columns: 1fr 1fr;
 gap: 3rem var(--grid-column-gap);
 margin-block-start: var(--spacing-m); }
+
+[data-variant="index"] {
+grid-template-columns: repeat(3, 1fr); }
 
 .item-post {
 border-block-end: unset;

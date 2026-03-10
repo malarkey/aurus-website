@@ -3,6 +3,7 @@ layout: layouts/page.html
 permalink: /faqs/
 title: Frequently asked questions
 metaDesc: Answers to common questions about Aurus Impact Capital.
+showSubnav: true
 ---
 
 {% set generalFaqs = collections.faqs | filterFaqsByCategory("general") %}

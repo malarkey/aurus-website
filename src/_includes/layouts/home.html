@@ -44,6 +44,7 @@
 
 
 
+<hr data-function="spacer">
 
 <div class="layout" data-bordered="top" data-layout="mongrol">
 
@@ -76,7 +77,7 @@
 
 <h2 data-size="2xl">Insights</h2>
 
-<div data-content="posts">
+<div data-content="posts" data-variant="index">
 {% for item in collections.blog %}
 {% if loop.index <= 4 %}
 {% set postListItems = [item] %}

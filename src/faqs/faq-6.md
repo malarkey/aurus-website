@@ -1,7 +1,11 @@
 ---
-question: "Where does Aurus Impact Capital operate?"
-answer: "Placeholder: Current activity is focused on UK-based opportunities aligned to social housing and long-term impact outcomes."
+question: "What happens at the end of 48 months?"
+answer: >
+  At the end of the 48-month term, investors are entitled to redemption of their capital
+  together with any rolled-up return element, subject to the formal terms of the investment
+  agreement. The structure is designed with a defined exit mechanism to provide clarity and
+  predictability.
 categories:
-  - general
+  - investor
 permalink: false
 ---

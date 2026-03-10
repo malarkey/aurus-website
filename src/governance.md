@@ -5,6 +5,7 @@ layout: layouts/page.html
 metaDesc: Aurus Impact Capital's governance principles, oversight model, and commitment to transparent stewardship.
 title: Governance
 permalink: /governance/
+showSubnav: true
 ---
 
 <p class="alt-lede">Risk discipline sits at the core of our investment approach. We operate a multi-layered risk management framework, which is designed to protect both income-performance and asset value over the long term.</p>

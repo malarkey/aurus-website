@@ -6,9 +6,9 @@ metaDesc: Aurus Impact Capital backs climate-positive growth with disciplined ca
 title: Impact capital for durable growth
 
 block1: |
- # Structured investment in essential housing</h1>
+ <h1>Structured investment in essential housing</h1>
 
- Operating across Britain, our mission is to help address a persistent shortfall in the supply of good quality social housing, and to provide investors with a share-based model that emphasises income security and long-term performance.
+ <p class="alt-lede">Operating across Britain, our mission is to help address a persistent shortfall in the supply of good quality social housing, and to provide investors with a share-based model that emphasises income security and long-term performance.</p>
 
 block2: |
  ## Our role is delivering essential housing
@@ -30,9 +30,9 @@ block5: |
 
  Delivers sustainable, predictable returns without the risks associated with property ownership.
 
-block6: >
- <h2><a href="/governance">Risk and governance</a></h2>
+block6: |
+ ## [Risk and governance](/governance/)
 
- <p>We maintain a disciplined, investor-first approach, putting a strong emphasis on oversight and risk mitigation.</p>
+ We maintain a disciplined, investor-first approach, putting a strong emphasis on oversight and risk mitigation.
 
 ---

@@ -5,12 +5,13 @@ layout: layouts/partners.html
 metaDesc: How Aurus Impact Capital works with advisors, institutions, operators, and sector specialists.
 title: Group and partners
 permalink: /partners/
+showSubnav: true
 
 section1: |
   <p class="alt-lede">We operate in conjunction with three related business and with a number of specialist partners. They share our commitment to delivering sustainable housing solutions while maintaining a disciplined, investor‐first approach. Together, we have a substantial presence in the essential housing market.</p>
 
 block1: |
- ## Aurus Social
+ ### Aurus Social
 
  A specialist in residential real estate investment and acquisition. Since 2021, it has focused primarily on delivering essential housing. It has lease agreements with registered housing providers across the UK. It has a portfolio with a capital value of c.£170 million, and a project pipeline worth over £47 million. It provides funding for capital projects together with all associated oversight and governance.
 

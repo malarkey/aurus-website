@@ -7,6 +7,10 @@
 <div class="layout" data-layout="joe-pineapples">
 <div>
 
+{% if showSubnav %}
+{% include "partials/subnav.html" %}
+{% endif %}
+
 {% if displayTitle %}
 <h1>{{ title }}</h1>
 {% else %}
@@ -19,4 +23,3 @@
 </div><!-- layout -->
 
 {% endblock %}
-

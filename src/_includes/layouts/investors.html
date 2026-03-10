@@ -8,6 +8,10 @@
 <div class="layout" data-layout="mad-ronn">
 
 <div>
+{% if showSubnav %}
+{% include "partials/subnav.html" %}
+{% endif %}
+
 <h1>{{ title }}</h1>
 {{ section1 | markdown | safe }}
 </div><!-- one -->

@@ -1,10 +1,6 @@
 {
   "items": [
     {
-      "text": "Investors",
-      "url": "/investors/"
-    },
-    {
       "text": "Partners",
       "url": "/partners/"
     },
@@ -15,6 +11,10 @@
     {
       "text": "FAQs",
       "url": "/faqs/"
+    },
+    {
+      "text": "Sign in",
+      "url": ""
     }
   ]
 }

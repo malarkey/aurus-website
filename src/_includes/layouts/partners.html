@@ -7,6 +7,10 @@
 <div class="layout" data-layout="mad-ronn">
 
 <div>
+{% if showSubnav %}
+{% include "partials/subnav.html" %}
+{% endif %}
+
 <h1>{{ title }}</h1>
 {{ section1 | markdown | safe }}
 </div><!-- one -->
@@ -15,7 +19,7 @@
 
 
 
-<h2>Our group</h2>
+<h2 data-size="xl">Our group</h2>
 
 <div class="layout" data-bordered="top" data-layout="mongrol">
 
@@ -35,7 +39,9 @@
 
 
 
-<h2>Our partners</h2>
+<hr data-function="spacer">
+
+<h2 data-size="xl">Our partners</h2>
 
 <div class="layout" data-bordered="top" data-layout="mongrol">
 

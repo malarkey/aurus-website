@@ -5,6 +5,7 @@ layout: layouts/investors.html
 metaDesc:
 title: Share-based investments
 permalink: /investors/
+showSubnav: true
 
 section1: |
   <p class="alt-lede">Through our share-based investment model, we develop homes with the specific intention of letting them out on a long-term basis to registered housing providers.</p>
@@ -132,7 +133,7 @@ section4: |
 
   </div><!-- layout -->
 
- You will be kept informed throughout the process via regular communications. All investor funds are transferred and deployed via solicitors in accordance with formal legal documentation. Capital is only released subject to agreed conditions, providing an additional layer of security and transparency. The total capital raise for this offering is capped at approximately £10 million, represented by 1,000 preference shares. Individual allocations are subject to availability within this overall limit.
+ You will be kept informed throughout the process via regular communications. All investor funds are transferred and deployed via solicitors in accordance with formal legal documentation. Capital is only released subject to agreed conditions, providing an additional layer of security and transparency. The total capital raise for this offering is capped at £10 million, represented by 1,000 preference shares. Individual allocations are subject to availability within this overall limit.
 
 block11: |
  <div data-align-v="center" data-layout="flex">
@@ -260,7 +261,7 @@ block13: |
  - Quarterly reports, including commentary on governance and risk
  - Annual dividend payments, supported by explanatory notes
 
- Through these and other communications, we’ll ensure that you stay informed about progress on site, and about the assessments of independent auditors and inspectors. You will also receive portfolio summaries and relevant financial overviews, together with details of any public policy announcements that could have a bearing on the performance of the development as a whole.
+ Through these and other communications, we’ll ensure that you stay informed about the assessments of independent auditors and inspectors. You will also receive portfolio summaries and relevant financial overviews, together with details of any public policy announcements that could have a bearing on the performance of the development as a whole.
 
 block14: |
 
