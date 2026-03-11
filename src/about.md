@@ -61,7 +61,7 @@ block3: |
 
  <tr>
  <th scope="row">Primrose</th>
- <td data-align-h="right">&#163;33.96m</td>
+ <td data-align-h="right">&#163;34.44m</td>
  <td data-align-h="right">102</td>
  <td data-align-h="right">&#163;9.1m</td>
  </tr>

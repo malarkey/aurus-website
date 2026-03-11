@@ -61,6 +61,11 @@ Our work is audited and supported by reputable, well-established names in the fi
  </tr>
 
  <tr>
+ <th scope="row">Corporate Administrator</th>
+ <td>ICECAP</td>
+ </tr>
+
+ <tr>
  <th scope="row">Solicitor</th>
  <td>Breecher LLP (conveyancing)</td>
  </tr>

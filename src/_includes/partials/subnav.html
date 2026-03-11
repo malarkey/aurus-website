@@ -1,12 +1,14 @@
 <ul class="alt-nav">
+
 <li>
-{% if page.url == "/faqs/" %}
-<span aria-current="page" data-state="active">FAQs</span>
+{% if page.url == "/investors/" %}
+<span aria-current="page" data-state="active">Investors</span>
 {% else %}
-<a href="/faqs/">FAQs</a>
+<a href="/faqs/">Investors</a>
 {% endif %}
 <span class="alt-separator" aria-hidden="true">&#x25FC;</span>
 </li>
+
 <li>
 {% if page.url == "/governance/" %}
 <span aria-current="page" data-state="active">Governance</span>
@@ -15,11 +17,22 @@
 {% endif %}
 <span class="alt-separator" aria-hidden="true">&#x25FC;</span>
 </li>
+
 <li>
 {% if page.url == "/partners/" %}
 <span aria-current="page" data-state="active">Partners</span>
 {% else %}
 <a href="/partners/">Partners</a>
 {% endif %}
+<span class="alt-separator" aria-hidden="true">&#x25FC;</span>
 </li>
+
+<li>
+{% if page.url == "/faqs/" %}
+<span aria-current="page" data-state="active">FAQs</span>
+{% else %}
+<a href="/faqs/">FAQs</a>
+{% endif %}
+</li>
+
 </ul>

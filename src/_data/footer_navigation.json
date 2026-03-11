@@ -1,20 +1,25 @@
 {
   "items": [
     {
-      "text": "Partners",
-      "url": "/partners/"
+      "text": "About",
+      "url": "/about/"
     },
     {
-      "text": "Governance",
-      "url": "/governance/"
+      "text": "Investors",
+      "url": "/investors/"
     },
     {
-      "text": "FAQs",
-      "url": "/faqs/"
+      "text": "Insights",
+      "url": "/insights/"
+    },
+    {
+      "text": "Contact",
+      "url": "/contact/"
     },
     {
       "text": "Sign in",
-      "url": ""
+      "url": "/",
+      "class": "btn"
     }
   ]
 }

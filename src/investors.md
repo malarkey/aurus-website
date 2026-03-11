@@ -40,7 +40,6 @@ block4: |
  Many of the most important benefits of this model stem from the market we serve and the way that the investments are structured.
 
  - Entry point is lower than for unit-by-unit property acquisitions
- - Stamp duty payable at a rate of just 0.5%
  - Returns are very reliable; based on long-term contracts with local authorities
  - Void and non-payment risks are exceptionally low
  - Exposure is spread across a whole portfolio, not dependent on a single asset
@@ -153,11 +152,6 @@ block11: |
  <td>&#163;600 / investment</td>
  </tr>
 
- <tr>
- <th scope="row">Stamp duty land tax</th>
- <td>.5&#37; of investment</td>
- </tr>
-
  </tbody>
  </table>
  </div><!-- one -->
@@ -179,13 +173,8 @@ block11: |
  </tr>
 
  <tr>
- <th scope="row">Stamp duty land tax</th>
- <td data-align-h="right">&#163;500</td>
- </tr>
-
- <tr>
  <th scope="row">Total initial outlay</th>
- <td data-align-h="right">&#163;101,100</td>
+ <td data-align-h="right">&#163;100,600</td>
  </tr>
 
  </tbody>
