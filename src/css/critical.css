@@ -1175,6 +1175,16 @@ opacity: .5; }
 [data-layout="happy-shrapnel"] .alt-box {
 margin-inline-start: var(--spacing-l); }
 
+[data-layout="happy-shrapnel"] [role="banner"] {
+display: block;
+margin-inline-start: var(--spacing-l); }
+
+[data-layout="happy-shrapnel"] [role="banner"] #banner-logo {
+max-inline-size: 320px; }
+
+[data-layout="happy-shrapnel"] [role="banner"] nav {
+text-align: unset; }
+
 [data-content="posts"] {
 display: grid;
 grid-template-columns: 1fr 1fr;
