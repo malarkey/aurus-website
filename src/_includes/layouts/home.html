@@ -1,11 +1,11 @@
 {% set assetHash = global.random() %}
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-page="{% if page.url == '/' %}home{% else %}inner{% endif %}"{% if theme %} data-theme="{{ theme }}"{% endif %}>
 
 {% include "partials/head.html" %}
 
-<body id="{{ site.siteID }}" data-page="{% if page.url == '/' %}home{% else %}inner{% endif %}"{% if theme %} data-theme="{{ theme }}"{% endif %}>
+<body id="{{ site.siteID }}">
 
 <section class="panel-full-bleed" data-theme="reversed">
 

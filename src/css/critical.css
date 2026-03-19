@@ -635,14 +635,15 @@ box-shadow: none;
 color: var(--color-button-text);
 cursor: pointer;
 font-family: var(--font-family-default);
-font-size: var(--font-size-r);
+font-size: var(--font-size-s);
 inline-size: fit-content;
 line-height: 1;
 margin: 0;
-padding-block: 15px;
-padding-inline: var(--spacing-r);
+padding-block: 8px;
+padding-inline: 10px;
 scale: 1;
 text-align: center;
+text-transform: uppercase;
 touch-action: manipulation;
 transition: all var(--animate-duration-faster) var(--animate-function);
 -webkit-user-select: none;
@@ -721,6 +722,18 @@ border-bottom: 1px solid var(--color-text-default); }
 .alt-box tbody tr:last-of-type td,
 .alt-box tbody tr:last-of-type th {
 border-bottom-width: 0; }
+
+.alt-stripes tbody th {
+padding-inline-start: var(--spacing-s); }
+
+.alt-stripes thead tr th:nth-child(odd):not(:first-child),
+.alt-stripes tbody tr td:nth-child(odd):not(:first-child),
+.alt-stripes tbody tr:nth-child(odd) {
+background-color: var(--color-background-default); }
+
+.alt-stripes thead tr th:nth-child(odd):not(:first-child),
+.alt-stripes tbody tr td:nth-child(odd):not(:first-child) {
+border-inline: 1px solid var(--color-text-default); }
 
 /* --------------------
 FONT SIZE UTILITIES
@@ -833,11 +846,6 @@ text-transform: uppercase; }
 nav a:not(.btn):hover,
 nav a:not(.btn):focus-visible {
 color: var(--color-text-link-hover); }
-
-nav a.btn {
-font-size: var(--font-size-s);
-padding-block: 8px;
-padding-inline: var(--spacing-r); }
 
 
 

@@ -34,7 +34,7 @@ block3: |
  <h2>Our housing portfolio</h2>
  <p>Each of these schemes involves a 35-year UK lease deal. The units are being let by local authorities to tenants who qualify for supported housing schemes, with Housing Benefit and Exempt Rent. Rental payments are therefore exceptionally reliable, regular and secure.</p>
 
- <table data-variant="s">
+ <table class="alt-stripes" data-variant="s">
  <thead>
  <tr>
  <th scope="col"></th>
