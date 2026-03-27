@@ -45,7 +45,7 @@ Our work is audited and supported by reputable, well-established names in the fi
 <div data-layout="flex">
 
 <div>
-<h3>Auris Impact Capital</h3>
+<h3>Aurus Impact Capital</h3>
 
  <table>
 

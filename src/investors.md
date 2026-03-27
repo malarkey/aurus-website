@@ -10,7 +10,7 @@ showSubnav: true
 section1: |
   <p class="alt-lede">Through our share-based investment model, we develop homes with the specific intention of letting them out on a long-term basis to registered housing providers.</p>
 
-  Investors acquire preference shares in Aurus Impact Capital itself, rather than in any particular property, and they are paid a dividend based on the company’s annual profits. In contrast to many traditional buy-to-let investments, which have tended to become more volatile and less profitable over recent years, it’s an approach that delivers robust and predictable returns.
+  Investors acquire preference shares in Aurus Impact Capital itself, rather than in any particular property, and they are paid a return based on the company’s annual profits. In contrast to many traditional buy-to-let investments, which have tended to become more volatile and less profitable over recent years, it’s an approach that delivers robust and predictable returns.
 
 block1: |
  ## Target market
@@ -26,7 +26,7 @@ block2: |
 block3: |
  <h2>Investment returns</h2>
 
- <p>Investors are required to make a minimum commitment of £100,000. They then receive a 5% return each year, plus an additional 5% which is held in accrual and repaid at the end of the four-year period, together with their initial investment.</p>
+ <p>Investors are required to make a minimum commitment of £50,000. They then receive a 5% return each year (paid as 2.5% dividends every 6 months,) plus an additional 5% which is held in accrual and repaid at the end of the four-year period, together with their initial investment.</p>
 
 section2: |
 
@@ -85,7 +85,7 @@ section3: |
 block8: |
  ## Minimum commitment
 
- This investment is available to investors who are able to commit £100,000 or more.
+ This investment is available to investors who are able to commit £50,000 or more.
 
 block9: |
  ## Term
@@ -144,7 +144,7 @@ block11: |
  <tbody>
  <tr>
  <th scope="row">Minimum investment</th>
- <td>&#163;100,000</td>
+ <td>&#163;50,000</td>
  </tr>
 
  <tr>
@@ -197,7 +197,7 @@ block12: |
  <tbody>
  <tr>
  <th scope="row">Contracted annual dividend</th>
- <td>5% per year, paid to investors annually</td>
+ <td>2.5% per 6 months paid to investors</td>
  </tr>
 
  <tr>
@@ -216,23 +216,18 @@ block12: |
 
  <tbody>
  <tr>
- <th scope="row">Yearly dividend</th>
- <td>&#163;5000 per year paid annually</td>
+ <th scope="row">Contracted annual dividend</th>
+ <td>2.5% per 6 months paid to investors</td>
  </tr>
 
  <tr>
- <th scope="row">Rolled-up growth after 4 years</th>
- <td>&#163;100,000 x 5% x 4 years = &#163;20,000</td>
+ <th scope="row">Example 6 Monthly dividend</th>
+ <td>&#163;2,500</td>
  </tr>
 
  <tr>
  <th scope="row">Total distributions over 4 years</th>
- <td>&#163;5000 x 4 years + &#163;20,000 = &#163;40,000</td>
- </tr>
-
- <tr>
- <th scope="row">Total capital + returns at exit</th>
- <td>&#163;100,000 + &#163;40,000 = &#163;140,000</td>
+ <td>&#163;2,500 x 8 + &#163;20,000 = &#163;40,000</td>
  </tr>
 
  </tbody>
@@ -248,7 +243,7 @@ block13: |
 
  - Newsletters with consolidated operational updates
  - Quarterly reports, including commentary on governance and risk
- - Annual dividend payments, supported by explanatory notes
+ - Annual return payments, supported by explanatory notes
 
  Through these and other communications, we’ll ensure that you stay informed about the assessments of independent auditors and inspectors. You will also receive portfolio summaries and relevant financial overviews, together with details of any public policy announcements that could have a bearing on the performance of the development as a whole.
 
@@ -258,7 +253,7 @@ block14: |
 
  The contract period is fixed for 48 months. However, investors will have an opportunity to exit the agreement.
 
- If they choose to do so, they will keep any annual dividends paid to them up to that date, but they would forego any additional accrued payments.
+ If they choose to do so, they will keep any annual returns paid to them up to that date, but they would forego any additional accrued payments.
 
  Thus, an investor who exits after 12 months would receive a 5% return but he/she would not be eligible to claim the additional 5% that would normally be held in accrual and paid to the investor at full term – i.e. after 4 years.
 
