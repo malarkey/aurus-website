@@ -443,6 +443,11 @@ display: inline-block; }
 .alt-inline li:not(:last-child) {
 margin-inline-end: var(--spacing-r); }
 
+.alt-nav {
+border: var(--border-width-r) solid var(--color-border);
+padding: var(--spacing-s);
+text-align: center; }
+
 .alt-nav li {
 display: inline-block;
 text-transform: uppercase; }
