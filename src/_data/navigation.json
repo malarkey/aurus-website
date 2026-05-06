@@ -18,7 +18,7 @@
     },
     {
       "text": "Sign in",
-      "url": "/",
+      "url": "https://portal.aurusic.com/login/investor",
       "class": "btn"
     }
   ]
