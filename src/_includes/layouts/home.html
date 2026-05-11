@@ -30,20 +30,24 @@
       width: 100%;
       max-width: 760px;
       text-align: center;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(0, 0, 0, 0.06);
+      border: 1px solid rgba(245, 242, 242, 0.12);
       border-radius: 28px;
       padding: 56px 36px;
       box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
       backdrop-filter: blur(18px);
     }
 
-    .brand {
-      font-size: 34px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      margin-bottom: 22px;
-      color: #d8b26e;
+    .logo-wrap {
+      margin-bottom: 26px;
+    }
+
+    .site-logo {
+      width: 240px;
+      max-width: 82%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
     }
 
     .status-badge {
@@ -118,13 +122,22 @@
     }
 
     @media (max-width: 600px) {
+      body {
+        padding: 18px;
+      }
+
       .maintenance-wrapper {
-        padding: 42px 24px;
+        padding: 42px 22px;
         border-radius: 22px;
       }
 
-      .brand {
-        font-size: 28px;
+      .site-logo {
+        width: 200px;
+        max-width: 86%;
+      }
+
+      h1 {
+        font-size: 34px;
       }
 
       p {
@@ -141,7 +154,10 @@
 
 <body>
   <main class="maintenance-wrapper">
-    <div class="brand">AURUSIC</div>
+
+    <div class="logo-wrap">
+      <img src="{{ site.assetPath }}/images/logo-banner.svg" alt="{{ title }}" class="site-logo">
+    </div>
 
     <div class="status-badge">
       Temporary Maintenance
@@ -164,6 +180,7 @@
       For urgent queries, please contact us at
       <a href="mailto:support@aurusic.com">support@aurusic.com</a>
     </div>
+
   </main>
 </body>
 </html>
