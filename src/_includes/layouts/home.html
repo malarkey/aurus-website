@@ -1,108 +1,169 @@
-{% set assetHash = global.random() %}
-
 <!DOCTYPE html>
-<html lang="en" data-page="{% if page.url == '/' %}home{% else %}inner{% endif %}"{% if theme %} data-theme="{{ theme }}"{% endif %}>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-{% include "partials/head.html" %}
+  <title>Aurusic | Website Temporarily Down</title>
+  <meta name="description" content="Aurusic website is temporarily unavailable due to maintenance. We will be back shortly." />
+  <meta name="robots" content="noindex, nofollow" />
 
-<body id="{{ site.siteID }}">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-<section class="panel-full-bleed" data-theme="reversed">
+    body {
+      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, #050505, #141414, #2b2116);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
 
-<div class="layout" data-layout="happy-shrapnel">
+    .maintenance-wrapper {
+      width: 100%;
+      max-width: 760px;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 28px;
+      padding: 56px 36px;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(18px);
+    }
 
-<div>
-{% include "partials/header.html" %}
+    .brand {
+      font-size: 34px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      margin-bottom: 22px;
+      color: #d8b26e;
+    }
 
-<div class="alt-box">
-<h1 data-visibility="hidden">{{ title }}</h1>
-{{ block1 | markdown | safe }}
-</div><!-- box -->
-</div><!-- one -->
+    .status-badge {
+      display: inline-block;
+      padding: 9px 18px;
+      border-radius: 999px;
+      background: rgba(216, 178, 110, 0.14);
+      color: #f0cd8a;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 28px;
+      border: 1px solid rgba(216, 178, 110, 0.35);
+    }
 
-<div>
-<figure>
-<img src="{{ site.assetPath }}/images/img-banner-1.webp" alt="{{ title }}">
-</figure>
-</div><!-- two -->
+    h1 {
+      font-size: clamp(34px, 5vw, 58px);
+      line-height: 1.08;
+      margin-bottom: 20px;
+      font-weight: 800;
+    }
 
-</div><!-- layout -->
+    p {
+      font-size: 18px;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.78);
+      max-width: 590px;
+      margin: 0 auto 34px;
+    }
 
+    .info-box {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 22px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.08);
+      color: rgba(255, 255, 255, 0.86);
+      font-size: 15px;
+      margin-bottom: 34px;
+    }
 
+    .loader {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      border: 4px solid rgba(255, 255, 255, 0.18);
+      border-top-color: #d8b26e;
+      margin: 0 auto 28px;
+      animation: spin 1s linear infinite;
+    }
 
-<div class="layout" data-layout="mongrol">
+    .contact {
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.62);
+    }
 
-<div>
-{{ block2 | markdown | safe }}
-</div><!-- one -->
+    .contact a {
+      color: #d8b26e;
+      text-decoration: none;
+      font-weight: 600;
+    }
 
-<div>
-{{ block3 | markdown | safe }}
-</div><!-- two -->
+    .contact a:hover {
+      text-decoration: underline;
+    }
 
-<div>
-<figure>
-<a href="javascript:void(0)"><img src="{{ site.assetPath }}/images/tmp-video.webp" alt="Watch our explainer video"></a>
-<figcaption>Watch our explainer video</figcaption>
-</figure>
-</div><!-- three -->
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
 
-</div><!-- layout -->
+    @media (max-width: 600px) {
+      .maintenance-wrapper {
+        padding: 42px 24px;
+        border-radius: 22px;
+      }
 
+      .brand {
+        font-size: 28px;
+      }
 
+      p {
+        font-size: 16px;
+      }
 
-<hr data-function="spacer">
+      .info-box {
+        font-size: 14px;
+        padding: 12px 16px;
+      }
+    }
+  </style>
+</head>
 
-<div class="layout" data-bordered="top" data-layout="mongrol">
+<body>
+  <main class="maintenance-wrapper">
+    <div class="brand">AURUSIC</div>
 
-<div>
-{{ block4 | markdown | safe }}
+    <div class="status-badge">
+      Temporary Maintenance
+    </div>
 
-<ul class="alt-inline">
-<li><a href="/investors/">Investors</a></li>
-<li><a href="/governance/">Governance</a></li>
-<li><a href="/partners/">Partners</a></li>
-<li><a href="/faqs/">FAQs</a></li>
-</ul>
+    <div class="loader" aria-hidden="true"></div>
 
-</div><!-- one -->
+    <h1>We’ll Be Back Soon</h1>
 
-<div>
-{{ block5 | markdown | safe }}
-</div><!-- two -->
+    <p>
+      Our website is temporarily unavailable while we perform scheduled maintenance
+      and improvements. We apologize for the inconvenience and appreciate your patience.
+    </p>
 
-<div>
-{{ block6 | markdown | safe }}
-</div><!-- three -->
+    <div class="info-box">
+      Please check back again shortly.
+    </div>
 
-</div><!-- layout -->
-
-</section>
-
-
-
-<div id="panels">
-<div class="panel">{% include "svgs/panel-1.svg" %}</div>
-<div class="panel">{% include "svgs/panel-2.svg" %}</div>
-<div class="panel">{% include "svgs/panel-3.svg" %}</div>
-<div class="panel">{% include "svgs/panel-4.svg" %}</div>
-</div><!-- panels -->
-
-
-
-<h2 data-size="2xl">Insights</h2>
-
-<div data-content="posts" data-variant="index">
-{% for item in collections.blog %}
-{% if loop.index <= 4 %}
-{% set postListItems = [item] %}
-{% include "partials/post-list.html" %}
-{% endif %}
-{% endfor %}
-</div>
-
-{% include "partials/footer.html" %}
-<script src="{{ site.assetPath }}/js/scripts.js"></script>
+    <div class="contact">
+      For urgent queries, please contact us at
+      <a href="mailto:support@aurusic.com">support@aurusic.com</a>
+    </div>
+  </main>
 </body>
-
 </html>
