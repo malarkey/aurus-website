@@ -928,6 +928,12 @@ padding-block: var(--spacing-l); }
 font-size: var(--font-size-s);
 margin-inline-end: unset; }
 
+[role="contentinfo"] .alt-inline li:not(:last-child)::after {
+color: var(--color-accent);
+content: "\25FC";
+display: inline-block;
+padding-inline: var(--spacing-xs); }
+
 [role="contentinfo"] a,
 [role="contentinfo"] a:visited {
 color: var(--color-text-default);

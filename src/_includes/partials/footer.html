@@ -26,9 +26,11 @@ London SWIX 7QA</p>
 <div>
 <ul class="alt-inline">
 {% for item in footer_navigation.items %}
+{% if item.url != "/privacy/" and item.url != "/cookies/" %}
 <li>
-<a href="{{ item.url }}"{{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{ item.text }}</a>{% if not loop.last %}<span class="alt-separator" aria-hidden="true">&#x25FC;</span>{% endif %}
+<a href="{{ item.url }}"{{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{ item.text }}</a>
 </li>
+{% endif %}
 {% endfor %}
 </ul>
 
@@ -37,6 +39,16 @@ London SWIX 7QA</p>
 
 <div>
 <small>&#169; Aurus Impact Capital. {{ global.currentYear() }}&#8211;now.</small>
+
+<ul class="alt-inline">
+{% for item in footer_navigation.items %}
+{% if item.url == "/privacy/" or item.url == "/cookies/" %}
+<li>
+<a href="{{ item.url }}"{{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{ item.text }}</a>
+</li>
+{% endif %}
+{% endfor %}
+</ul>
 </div><!-- two -->
 
 </div><!-- layout -->

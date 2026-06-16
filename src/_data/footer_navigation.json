@@ -17,6 +17,14 @@
       "url": "/contact/"
     },
     {
+      "text": "Privacy",
+      "url": "/privacy/"
+    },
+    {
+      "text": "Cookies",
+      "url": "/cookies/"
+    },
+    {
       "text": "Sign in",
       "url": "https://portal.aurusic.com/login/investor",
       "class": "btn"
