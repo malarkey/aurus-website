@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Aurusic | Website Temporarily Down</title>
+  <meta name="description" content="Aurusic website is temporarily unavailable due to maintenance. We will be back shortly." />
+  <meta name="robots" content="noindex, nofollow" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, #050505, #141414, #2b2116);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .maintenance-wrapper {
+      width: 100%;
+      max-width: 760px;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.06);
+      border: 1px solid rgba(245, 242, 242, 0.12);
+      border-radius: 28px;
+      padding: 56px 36px;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(18px);
+    }
+
+    .logo-wrap {
+      margin-bottom: 26px;
+    }
+
+    .site-logo {
+      width: 240px;
+      max-width: 82%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .status-badge {
+      display: inline-block;
+      padding: 9px 18px;
+      border-radius: 999px;
+      background: rgba(216, 178, 110, 0.14);
+      color: #f0cd8a;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 28px;
+      border: 1px solid rgba(216, 178, 110, 0.35);
+    }
+
+    h1 {
+      font-size: clamp(34px, 5vw, 58px);
+      line-height: 1.08;
+      margin-bottom: 20px;
+      font-weight: 800;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.78);
+      max-width: 590px;
+      margin: 0 auto 34px;
+    }
+
+    .info-box {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 22px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.08);
+      color: rgba(255, 255, 255, 0.86);
+      font-size: 15px;
+      margin-bottom: 34px;
+    }
+
+    .loader {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      border: 4px solid rgba(255, 255, 255, 0.18);
+      border-top-color: #d8b26e;
+      margin: 0 auto 28px;
+      animation: spin 1s linear infinite;
+    }
+
+    .contact {
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.62);
+    }
+
+    .contact a {
+      color: #d8b26e;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 18px;
+      }
+
+      .maintenance-wrapper {
+        padding: 42px 22px;
+        border-radius: 22px;
+      }
+
+      .site-logo {
+        width: 200px;
+        max-width: 86%;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      .info-box {
+        font-size: 14px;
+        padding: 12px 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="maintenance-wrapper">
+
+    <div class="logo-wrap">
+      <img src="{{ site.assetPath }}/images/logo-banner.svg" alt="{{ title }}" class="site-logo">
+    </div>
+
+    <div class="status-badge">
+      Temporary Maintenance
+    </div>
+
+    <div class="loader" aria-hidden="true"></div>
+
+    <h1>We’ll Be Back Soon</h1>
+
+    <p>
+      Our website is temporarily unavailable while we perform scheduled maintenance
+      and improvements. We apologize for the inconvenience and appreciate your patience.
+    </p>
+
+    <div class="info-box">
+      Please check back again shortly.
+    </div>
+
+    <div class="contact">
+      For urgent queries, please contact us at
+      <a href="mailto:support@aurusic.com">support@aurusic.com</a>
+    </div>
+
+  </main>
+</body>
+</html>
