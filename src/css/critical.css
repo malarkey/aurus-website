@@ -207,6 +207,7 @@ html {
 -webkit-text-size-adjust: 100%;
 background-color: var(--color-background-default);
 overflow-x: hidden;
+scrollbar-gutter: stable;
 scroll-behavior: smooth;
 text-size-adjust: none; }
 
@@ -683,8 +684,8 @@ position: fixed;
 z-index: var(--z-modal); }
 
 .investor-gate__backdrop {
--webkit-backdrop-filter: blur(8px);
-backdrop-filter: blur(8px);
+-webkit-backdrop-filter: blur(3px);
+backdrop-filter: blur(3px);
 background-color: color-mix(in oklch, var(--color-background-alt) 72%, transparent);
 inset: 0;
 position: fixed;
@@ -788,9 +789,6 @@ flex: 1 1 10rem; }
 background-color: color-mix(in oklch, var(--color-border) 14%, transparent);
 color: var(--color-text-default);
 scale: var(--scale-down); }
-
-body.has-investor-gate {
-overflow: hidden; }
 
 html.has-investor-gate {
 background-color: var(--color-background-alt); }
