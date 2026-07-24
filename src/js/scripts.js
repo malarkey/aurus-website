@@ -180,3 +180,160 @@
   setActivePanel(0);
   startAutoplay();
 })();
+
+(() => {
+  const gate = document.querySelector("[data-investor-gate]");
+
+  if (!gate) {
+    return;
+  }
+
+  const storageKey = "aurusInvestorInformationConfirmed";
+  const exitFallbackUrl = "https://www.fca.org.uk/";
+  const dialog = gate.querySelector('[role="dialog"]');
+  const confirmButton = gate.querySelector("[data-investor-gate-confirm]");
+  const exitButton = gate.querySelector("[data-investor-gate-exit]");
+  const focusableSelector = [
+    "a[href]",
+    "button:not([disabled])",
+    "input:not([disabled])",
+    "select:not([disabled])",
+    "textarea:not([disabled])",
+    "[tabindex]:not([tabindex='-1'])",
+  ].join(",");
+
+  if (!dialog || !confirmButton || !exitButton) {
+    return;
+  }
+
+  const readConfirmation = () => {
+    try {
+      return window.localStorage.getItem(storageKey) === "true";
+    } catch (error) {
+      return false;
+    }
+  };
+
+  const writeConfirmation = () => {
+    try {
+      window.localStorage.setItem(storageKey, "true");
+    } catch (error) {
+      // Storage can be unavailable in private browsing; closing still works.
+    }
+  };
+
+  if (readConfirmation()) {
+    return;
+  }
+
+  let previousFocus = null;
+  let gatedSiblings = [];
+
+  const getFocusableItems = () => {
+    return Array.from(dialog.querySelectorAll(focusableSelector)).filter((item) => {
+      return item.offsetParent !== null || item === document.activeElement;
+    });
+  };
+
+  const setPageInert = (isInert) => {
+    if (isInert) {
+      gatedSiblings = Array.from(document.body.children)
+        .filter((item) => item !== gate && item.tagName !== "SCRIPT")
+        .map((item) => {
+          const state = {
+            element: item,
+            ariaHidden: item.getAttribute("aria-hidden"),
+            inert: item.inert,
+          };
+
+          item.inert = true;
+          item.setAttribute("aria-hidden", "true");
+          return state;
+        });
+      return;
+    }
+
+    gatedSiblings.forEach(({ element, ariaHidden, inert }) => {
+      element.inert = inert;
+
+      if (ariaHidden === null) {
+        element.removeAttribute("aria-hidden");
+        return;
+      }
+
+      element.setAttribute("aria-hidden", ariaHidden);
+    });
+    gatedSiblings = [];
+  };
+
+  const handleKeydown = (event) => {
+    if (event.key === "Escape") {
+      event.preventDefault();
+      event.stopPropagation();
+      return;
+    }
+
+    if (event.key !== "Tab") {
+      return;
+    }
+
+    const focusableItems = getFocusableItems();
+
+    if (!focusableItems.length) {
+      event.preventDefault();
+      dialog.focus();
+      return;
+    }
+
+    const firstItem = focusableItems[0];
+    const lastItem = focusableItems[focusableItems.length - 1];
+
+    if (event.shiftKey && document.activeElement === firstItem) {
+      event.preventDefault();
+      lastItem.focus();
+      return;
+    }
+
+    if (!event.shiftKey && document.activeElement === lastItem) {
+      event.preventDefault();
+      firstItem.focus();
+    }
+  };
+
+  const closeGate = () => {
+    gate.hidden = true;
+    document.body.classList.remove("has-investor-gate");
+    setPageInert(false);
+    document.removeEventListener("keydown", handleKeydown, true);
+
+    if (previousFocus instanceof HTMLElement) {
+      previousFocus.focus();
+    }
+  };
+
+  const exitWebsite = () => {
+    if (window.history.length > 1) {
+      window.history.back();
+      return;
+    }
+
+    window.location.assign(exitFallbackUrl);
+  };
+
+  previousFocus = document.activeElement;
+  gate.hidden = false;
+  document.body.classList.add("has-investor-gate");
+  setPageInert(true);
+  document.addEventListener("keydown", handleKeydown, true);
+
+  window.requestAnimationFrame(() => {
+    confirmButton.focus();
+  });
+
+  confirmButton.addEventListener("click", () => {
+    writeConfirmation();
+    closeGate();
+  });
+
+  exitButton.addEventListener("click", exitWebsite);
+})();
