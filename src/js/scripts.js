@@ -190,6 +190,7 @@
 
   const storageKey = "aurusInvestorInformationConfirmed";
   const exitFallbackUrl = "https://www.fca.org.uk/";
+  const showDelay = 2000;
   const dialog = gate.querySelector('[role="dialog"]');
   const confirmButton = gate.querySelector("[data-investor-gate-confirm]");
   const exitButton = gate.querySelector("[data-investor-gate-exit]");
@@ -302,6 +303,7 @@
 
   const closeGate = () => {
     gate.hidden = true;
+    document.documentElement.classList.remove("has-investor-gate");
     document.body.classList.remove("has-investor-gate");
     setPageInert(false);
     document.removeEventListener("keydown", handleKeydown, true);
@@ -320,15 +322,18 @@
     window.location.assign(exitFallbackUrl);
   };
 
-  previousFocus = document.activeElement;
-  gate.hidden = false;
-  document.body.classList.add("has-investor-gate");
-  setPageInert(true);
-  document.addEventListener("keydown", handleKeydown, true);
+  const showGate = () => {
+    previousFocus = document.activeElement;
+    gate.hidden = false;
+    document.documentElement.classList.add("has-investor-gate");
+    document.body.classList.add("has-investor-gate");
+    setPageInert(true);
+    document.addEventListener("keydown", handleKeydown, true);
 
-  window.requestAnimationFrame(() => {
-    confirmButton.focus();
-  });
+    window.requestAnimationFrame(() => {
+      confirmButton.focus();
+    });
+  };
 
   confirmButton.addEventListener("click", () => {
     writeConfirmation();
@@ -336,4 +341,6 @@
   });
 
   exitButton.addEventListener("click", exitWebsite);
+
+  window.setTimeout(showGate, showDelay);
 })();
