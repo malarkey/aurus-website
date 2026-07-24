@@ -716,11 +716,16 @@ padding: clamp(1.5rem, 1.0435rem + 2.2826vi, 2.8125rem); }
 .investor-gate__body {
 margin-trim: block; }
 
+.investor-gate__header {
+border-block-end: 1px solid color-mix(in oklch, var(--color-border) 42%, transparent);
+padding-block-end: var(--spacing-r); }
+
 .investor-gate__eyebrow {
-color: var(--color-brand);
+color: color-mix(in oklch, var(--color-text-default) 76%, var(--color-brand));
 font-size: var(--font-size-s);
 font-weight: var(--font-weight-bd);
-margin-block-end: var(--spacing-xs); }
+margin-block-end: var(--spacing-xs);
+text-transform: none; }
 
 .investor-gate h2 {
 font-size: var(--font-size-xl);

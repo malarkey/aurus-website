@@ -190,7 +190,6 @@
 
   const storageKey = "aurusInvestorInformationConfirmed";
   const exitFallbackUrl = "https://www.fca.org.uk/";
-  const showDelay = 2000;
   const dialog = gate.querySelector('[role="dialog"]');
   const confirmButton = gate.querySelector("[data-investor-gate-confirm]");
   const exitButton = gate.querySelector("[data-investor-gate-exit]");
@@ -342,5 +341,5 @@
 
   exitButton.addEventListener("click", exitWebsite);
 
-  window.setTimeout(showGate, showDelay);
+  showGate();
 })();
