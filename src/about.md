@@ -47,30 +47,30 @@ block3: |
  <tbody>
  <tr>
  <th scope="row">Hat</th>
- <td data-align-h="right">&#163;30.95m</td>
+ <td data-align-h="right">&#163;33.75m</td>
  <td data-align-h="right">138</td>
- <td data-align-h="right">&#163;3.8m</td>
+ <td data-align-h="right">&#163;6.58m</td>
  </tr>
 
  <tr>
  <th scope="row">Daimler</th>
- <td data-align-h="right">&#163;52.5m</td>
+ <td data-align-h="right">&#163;63.50m</td>
  <td data-align-h="right">227</td>
- <td data-align-h="right">&#163;14.5m</td>
+ <td data-align-h="right">&#163;24.96m</td>
  </tr>
 
  <tr>
  <th scope="row">Primrose</th>
- <td data-align-h="right">&#163;34.44m</td>
+ <td data-align-h="right">&#163;43.98m</td>
  <td data-align-h="right">102</td>
- <td data-align-h="right">&#163;9.1m</td>
+ <td data-align-h="right">&#163;18.33m</td>
  </tr>
 
  <tr>
  <th scope="row">Northern</th>
- <td data-align-h="right">&#163;19.6m</td>
+ <td data-align-h="right">&#163;16.96m</td>
  <td data-align-h="right">220</td>
- <td data-align-h="right">&#163;6.16m</td>
+ <td data-align-h="right">&#163;3.31m</td>
  </tr>
  </tbody>
 
