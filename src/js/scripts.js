@@ -302,7 +302,6 @@
 
   const closeGate = () => {
     gate.hidden = true;
-    document.documentElement.classList.remove("has-investor-gate");
     document.body.classList.remove("has-investor-gate");
     setPageInert(false);
     document.removeEventListener("keydown", handleKeydown, true);
@@ -324,7 +323,6 @@
   const showGate = () => {
     previousFocus = document.activeElement;
     gate.hidden = false;
-    document.documentElement.classList.add("has-investor-gate");
     document.body.classList.add("has-investor-gate");
     setPageInert(true);
     document.addEventListener("keydown", handleKeydown, true);
