@@ -13,7 +13,7 @@ section1: |
 block1: |
  ### Aurus Social
 
- A specialist in residential real estate investment and acquisition. Since 2021, it has focused primarily on delivering essential housing. It has lease agreements with registered housing providers across the UK. It has a portfolio with a capital value of c.£170 million, and a project pipeline worth over £47 million. It provides funding for capital projects together with all associated oversight and governance.
+ A specialist in residential real estate investment and acquisition. Since 2021, it has focused primarily on delivering essential housing. It has lease agreements with registered housing providers across the UK. It has a portfolio with a capital value of c.£158 million, and a project pipeline worth over £47 million. It provides funding for capital projects together with all associated oversight and governance.
 
 block2: |
  ### [Aurus Corporate](https://www.auruscs.com/)

@@ -219,5 +219,10 @@ stroke-dashoffset: 0;
 
 <path class="panel-3-line" fill="none" pathLength="1" stroke="#16599c" stroke-linecap="round" stroke-width="10" d="m78.48 907.33 941.63-226.87L1874.86 560 3587.55 81.65"/>
 
+<g aria-label="£158m portfolio">
+<rect x="440" y="105" width="500" height="170" fill="#fff"/>
+<text x="460" y="250" fill="#b2b095" font-family="Lato, sans-serif" font-size="160" font-weight="700">£158m</text>
+</g>
+
 
 </svg>
