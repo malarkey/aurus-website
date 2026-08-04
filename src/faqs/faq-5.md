@@ -1,10 +1,15 @@
 ---
 question: "Is early exit available?"
 answer: >
-  Yes. Investors may request early redemption after 12 months. However, early redemption
-  does not include the rolled-up interest element, which is payable only on completion of
-  the full 48-month term. Early exit is subject to the company’s liquidity position and the
-  terms of the investment documentation.
+  Compassionate early redemption is available after 12 months, in cases of death, critical illness or severe disability of the primary investor, subject to the approval of the administrator; however:
+
+  • The rolled-up element is only payable upon full term completion
+
+  • Early exit is subject to liquidity and formal documentation
+
+  Investors should therefore consider this a medium-term investment.
+
+  The Company may redeem the Preference Shares earlier at its discretion in certain circumstances.
 categories:
   - investor
 permalink: false

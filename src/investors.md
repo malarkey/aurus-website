@@ -26,7 +26,7 @@ block2: |
 block3: |
  <h2>Investment returns</h2>
 
- <p>Investors are required to make a minimum commitment of £50,000. They then receive a 5% return each year (paid as 2.5% dividends every 6 months,) plus an additional 5% which is held in accrual and repaid at the end of the four-year period, together with their initial investment.</p>
+ <p>Investors are required to make a minimum commitment of £100,000. They then receive a 40% return at the end of the term (paid as 2.5% dividends every 6 months,) plus an additional 20% which is held in accrual and repaid at the end of the four-year term, together with their initial investment.</p>
 
 section2: |
 
@@ -85,12 +85,12 @@ section3: |
 block8: |
  ## Minimum commitment
 
- This investment is available to investors who are able to commit £50,000 or more.
+ This investment is available to investors who are able to commit £100,000 or more.
 
 block9: |
  ## Term
 
- 4 years, fixed, but with an break option to exit the scheme after 1 year.
+ The investment is intended to be held for the full four-year term. Early redemption is available at management discretion in certain circumstances.
 
 block10: |
  ## Suitability
@@ -144,7 +144,7 @@ block11: |
  <tbody>
  <tr>
  <th scope="row">Minimum investment</th>
- <td>&#163;50,000</td>
+ <td>&#163;100,000</td>
  </tr>
 
  <tr>
@@ -251,11 +251,7 @@ block14: |
 
  ## Early exit option
 
- The contract period is fixed for 48 months. However, investors will have an opportunity to exit the agreement.
-
- If they choose to do so, they will keep any annual returns paid to them up to that date, but they would forego any additional accrued payments.
-
- Thus, an investor who exits after 12 months would receive a 5% return but he/she would not be eligible to claim the additional 5% that would normally be held in accrual and paid to the investor at full term – i.e. after 4 years.
+ Although Preference Shares are not redeemable at the option of investors, the Company recognises that exceptional personal circumstances can arise. In such cases, the directors may, in their absolute discretion, consider whether to exercise the Company's right to redeem Preference Shares prior to the Final Redemption Date. Any decision will be made on a case-by-case basis and no investor has any right to require or expect an early redemption.
 
 block15: |
 

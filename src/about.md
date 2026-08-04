@@ -10,7 +10,7 @@ lede: |
   <p class="alt-lede">Aurus Impact Capital is a Jersey-incorporated investment vehicle. It was established to provide investors with structured access to a portfolio of income-generating UK residential property assets, with a focus on Specialist Supported Housing.</p>
 
 block1: |
- <p>Aurus Impact Capital was established as a special purpose vehicle in which private investors are able to buy preference shares. Operating alongside the Carnegie Group and Genivs Investment Group, we are part-owners of an essential housing portfolio that comprises almost 700 units and has an independent valuation of approximately £170 million. All the developments featuring in this investment model will be managed by Arpeggio. Upon completion, they will be leased to registered providers working in the essential housing market.</p>
+ <p>Aurus Impact Capital was established as a special purpose vehicle in which private investors are able to buy preference shares. Operating alongside the Carnegie Group and Genivs Investment Group, we are part-owners of an essential housing portfolio that comprises almost 700 units and has an independent valuation of approximately £158 million. All the developments featuring in this investment model will be managed by Arpeggio. Upon completion, they will be leased to registered providers working in the essential housing market.</p>
 
  <p>We are led by a team of highly accomplished professionals with extensive experience in the property, finance, housing and investment markets.</p>
 
@@ -68,9 +68,9 @@ block3: |
 
  <tr>
  <th scope="row">Northern</th>
- <td data-align-h="right">&#163;16.96m</td>
+ <td data-align-h="right">&#163;16.99m</td>
  <td data-align-h="right">220</td>
- <td data-align-h="right">&#163;3.31m</td>
+ <td data-align-h="right">&#163;3.35m</td>
  </tr>
  </tbody>
 

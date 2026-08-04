@@ -948,7 +948,8 @@ transition: height 0.5s ease, content-visibility 0.5s ease allow-discrete; }
 [open]::details-content { height: auto; }}
 
 details p {
-margin-block: var(--spacing-s) 0; }
+margin-block: var(--spacing-s) 0;
+white-space: pre-line; }
 
 summary::marker {
 color: var(--color-accent);
