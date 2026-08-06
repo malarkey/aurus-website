@@ -25,12 +25,10 @@ When assessing any investment class, investors typically consider several factor
 - Historical performance
 - Income potential
 - Volatility
-## Inflation protection
-
+- Inflation protection
 - Liquidity
 - Diversification benefits
-### Long-term demand drivers
-
+- Long-term demand drivers
 Property has traditionally scored well across many of these categories, helping explain its enduring popularity.
 
 ## The Long-Term Track Record of Property
@@ -178,8 +176,7 @@ Pension funds, insurers and investment managers continue to allocate significant
 Their reasons remain broadly consistent:
 
 - Income generation
-## Inflation protection
-
+- Inflation protection
 - Diversification benefits
 - Long-term capital preservation
 - Exposure to essential assets

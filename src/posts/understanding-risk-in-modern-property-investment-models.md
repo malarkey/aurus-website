@@ -32,8 +32,7 @@ Market risk refers to the possibility that property values may rise or fall due 
 
 Several factors can influence property markets:
 
-### Interest rates
-
+- Interest rates
 - Inflation
 - Employment levels
 - Consumer confidence

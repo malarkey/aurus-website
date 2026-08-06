@@ -42,8 +42,7 @@ Today's investors operate in a very different environment compared with previous
 Technology has transformed many aspects of financial services, creating expectations around:
 
 - Accessibility
-### Transparency
-
+- Transparency
 - Efficiency
 - Information availability
 - User experience
@@ -60,8 +59,7 @@ Property remains a complex asset class influenced by numerous factors, including
 - Economic conditions
 - Demographic trends
 - Regulation
-### Interest rates
-
+- Interest rates
 - Local market dynamics
 Simplification does not remove these factors.
 
@@ -178,8 +176,7 @@ Several trends are likely to shape the future of property investing:
 - Greater accessibility
 - Increased use of technology
 - Enhanced transparency
-### Professional management
-
+- Professional management
 - Diversified investment structures
 - Institutional best practices
 These developments do not change the fundamental nature of property as an asset class, but they do change how investors interact with it.
@@ -195,4 +192,3 @@ Modern investment models are seeking to simplify access, improve efficiency and 
 As technology advances and investor expectations continue to evolve, property investment is becoming more accessible, transparent and flexible than ever before.
 
 For many investors, the future of property investing may not be defined by how many properties they own, but by how effectively they can access the opportunities the property market provides.
-
