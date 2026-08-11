@@ -52,7 +52,7 @@ Our work is audited and supported by reputable, well-established names in the fi
  <tbody>
  <tr>
  <th scope="row">Auditors</th>
- <td>Tilly Channel Islands Limited</td>
+ <td>Baker Tilly Channel Islands Limited</td>
  </tr>
 
  <tr>
