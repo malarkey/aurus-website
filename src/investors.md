@@ -247,12 +247,6 @@ block13: |
 
  Through these and other communications, we’ll ensure that you stay informed about the assessments of independent auditors and inspectors. You will also receive portfolio summaries and relevant financial overviews, together with details of any public policy announcements that could have a bearing on the performance of the development as a whole.
 
-block14: |
-
- ## Early exit option
-
- Although Preference Shares are not redeemable at the option of investors, the Company recognises that exceptional personal circumstances can arise. In such cases, the directors may, in their absolute discretion, consider whether to exercise the Company's right to redeem Preference Shares prior to the Final Redemption Date. Any decision will be made on a case-by-case basis and no investor has any right to require or expect an early redemption.
-
 block15: |
 
  ## Access to information
