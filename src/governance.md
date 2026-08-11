@@ -10,7 +10,7 @@ showSubnav: true
 
 <p class="alt-lede">Risk discipline sits at the core of our investment approach. We operate a multi-layered risk management framework, which is designed to protect both income-performance and asset value over the long term.</p>
 
-All our schemes are subject to rigorous governance and oversight. We appoint independent FCA-registered administrators and commit to full transparency via ongoing monitoring and regular reviews of standards of governance. Objective, third-party scrutiny is provided by ICECAP, which is regulated by the most stringent financial body in Jersey: the Jersey Financial Services Commission. In addition, where external financing is in place, we work with our lenders’ chosen consultants. Well-known providers such as Aon, WSP and AWH prepare and submit regular reports on matters including insurance, property maintenance and refurbishment works.
+All our schemes are subject to rigorous governance and oversight. We appoint an independent administrator regulated by the Jersey Financial Services Commission and commit to full transparency via ongoing monitoring and regular reviews of standards of governance. Objective, third-party scrutiny is provided by ICECAP, which is regulated by the most stringent financial body in Jersey: the Jersey Financial Services Commission. In addition, where external financing is in place, we work with our lenders’ chosen consultants. Well-known providers such as Aon, WSP and AWH prepare and submit regular reports on matters including insurance, property maintenance and refurbishment works.
 
 ---
 
@@ -52,7 +52,7 @@ Our work is audited and supported by reputable, well-established names in the fi
  <tbody>
  <tr>
  <th scope="row">Auditors</th>
- <td>Grant Thornton Limited</td>
+ <td>Tilly Channel Islands Limited</td>
  </tr>
 
  <tr>

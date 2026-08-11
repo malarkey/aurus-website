@@ -90,7 +90,7 @@ block8: |
 block9: |
  ## Term
 
- The investment is intended to be held for the full four-year term. Early redemption is available at management discretion in certain circumstances.
+ The investment is intended to be held for the full four-year term.
 
 block10: |
  ## Suitability
