@@ -198,7 +198,6 @@
   const summaryPanel = gate.querySelector("[data-investor-gate-summary]");
   const noticePanel = gate.querySelector("[data-investor-gate-notice]");
   const noticeScroll = gate.querySelector("[data-investor-gate-scroll]");
-  const noticeEndMarker = gate.querySelector("[data-investor-gate-notice-end]");
   const confirmHint = gate.querySelector("[data-investor-gate-confirm-hint]");
   const focusableSelector = [
     "a[href]",
@@ -209,7 +208,7 @@
     "[tabindex]:not([tabindex='-1'])",
   ].join(",");
 
-  if (!dialog || !confirmButton || !exitButton || !readButton || !bodyPanel || !summaryPanel || !noticePanel || !noticeScroll || !noticeEndMarker || !confirmHint) {
+  if (!dialog || !confirmButton || !exitButton || !readButton || !bodyPanel || !summaryPanel || !noticePanel || !noticeScroll || !confirmHint) {
     return;
   }
 
@@ -237,7 +236,7 @@
   let gatedSiblings = [];
   let hasOpenedNotice = false;
   let hasScrolledNotice = false;
-  const scrollEndTolerance = 16;
+  const scrollEndTolerance = 4;
 
   const disableConfirmation = () => {
     confirmButton.disabled = true;
@@ -263,23 +262,8 @@
     return Math.ceil(container.scrollTop) >= maxScrollTop - scrollEndTolerance;
   };
 
-  const isNoticeEndVisible = () => {
-    const noticeScrollRect = noticeScroll.getBoundingClientRect();
-    const bodyPanelRect = bodyPanel.getBoundingClientRect();
-    const noticeEndRect = noticeEndMarker.getBoundingClientRect();
-
-    return (
-      noticeEndRect.bottom <= noticeScrollRect.bottom + scrollEndTolerance ||
-      noticeEndRect.bottom <= bodyPanelRect.bottom + scrollEndTolerance
-    );
-  };
-
   const hasReadNoticeToEnd = () => {
-    return (
-      hasContainerReachedEnd(noticeScroll) ||
-      hasContainerReachedEnd(bodyPanel) ||
-      isNoticeEndVisible()
-    );
+    return hasContainerReachedEnd(noticeScroll);
   };
 
   const updateConfirmationAvailability = () => {
@@ -297,7 +281,9 @@
   };
 
   const handleNoticeScroll = () => {
-    hasScrolledNotice = true;
+    if (noticeScroll.scrollTop > 0) {
+      hasScrolledNotice = true;
+    }
 
     updateConfirmationAvailability();
   };
@@ -314,6 +300,7 @@
   const showNotice = () => {
     summaryPanel.hidden = true;
     noticePanel.hidden = false;
+    gate.setAttribute("data-investor-gate-reading", "true");
     hasOpenedNotice = true;
     hasScrolledNotice = false;
     disableConfirmation();
@@ -404,6 +391,7 @@
 
   const closeGate = () => {
     gate.hidden = true;
+    gate.removeAttribute("data-investor-gate-reading");
     document.body.classList.remove("has-investor-gate");
     setPageInert(false);
     document.removeEventListener("keydown", handleKeydown, true);
@@ -430,6 +418,7 @@
     document.addEventListener("keydown", handleKeydown, true);
     hasOpenedNotice = false;
     hasScrolledNotice = false;
+    gate.removeAttribute("data-investor-gate-reading");
     disableConfirmation();
 
     window.requestAnimationFrame(() => {
@@ -439,7 +428,6 @@
 
   readButton.addEventListener("click", showNotice);
   noticeScroll.addEventListener("scroll", handleNoticeScroll, { passive: true });
-  bodyPanel.addEventListener("scroll", handleNoticeScroll, { passive: true });
   noticeScroll.addEventListener("wheel", handleNoticeProgress, { passive: true });
   noticeScroll.addEventListener("touchmove", handleNoticeProgress, { passive: true });
   noticeScroll.addEventListener("keyup", handleNoticeProgress);

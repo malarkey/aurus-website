@@ -724,6 +724,12 @@ margin-trim: block; }
 min-block-size: 0;
 overflow: auto; }
 
+.investor-gate[data-investor-gate-reading="true"] .investor-gate__body {
+display: grid;
+grid-template-rows: minmax(0, 1fr);
+min-block-size: 0;
+overflow: hidden; }
+
 .investor-gate__header {
 border-block-end: 1px solid color-mix(in oklch, var(--color-border) 42%, transparent);
 padding-block-end: var(--spacing-r); }
@@ -802,10 +808,11 @@ scale: var(--scale-down); }
 display: none; }
 
 .investor-gate__notice {
+block-size: 100%;
 display: grid;
 gap: var(--spacing-r);
 grid-template-rows: auto minmax(0, 1fr);
-min-block-size: 100%; }
+min-block-size: 0; }
 
 .investor-gate__notice-instruction {
 font-weight: var(--font-weight-bd);
@@ -816,16 +823,24 @@ border: 1px solid color-mix(in oklch, var(--color-border) 54%, transparent);
 border-radius: var(--border-radius-r);
 box-sizing: border-box;
 min-block-size: 0;
+overscroll-behavior: contain;
 overflow: auto;
 padding: var(--spacing-r); }
+
+.investor-gate__notice-scroll {
+scrollbar-color: var(--color-border) var(--color-base);
+scrollbar-gutter: stable;
+scrollbar-width: auto; }
+
+.investor-gate__notice-scroll::-webkit-scrollbar {
+width: 10px; }
+
+.investor-gate__notice-scroll::-webkit-scrollbar-thumb {
+background-color: var(--color-border); }
 
 .investor-gate__notice-scroll:focus {
 outline: var(--border-width-r) solid var(--color-border);
 outline-offset: 3px; }
-
-.investor-gate__notice-end {
-block-size: 1px;
-display: block; }
 
 .investor-gate .important-notice-content h2 {
 font-size: var(--font-size-r);
@@ -882,8 +897,9 @@ inline-size: 100%; }
 
 .investor-gate__confirm:disabled,
 .investor-gate__confirm[aria-disabled="true"] {
-background-color: color-mix(in oklch, var(--color-text-default) 32%, var(--color-background-default));
-color: var(--color-text-alt);
+background-color: color-mix(in oklch, var(--color-background-alt) 18%, var(--color-background-default));
+border-color: color-mix(in oklch, var(--color-text-default) 22%, var(--color-background-default));
+color: color-mix(in oklch, var(--color-text-default) 58%, var(--color-background-default));
 cursor: not-allowed;
 opacity: 1;
 pointer-events: none;
