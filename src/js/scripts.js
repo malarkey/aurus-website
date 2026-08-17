@@ -197,6 +197,7 @@
   const summaryPanel = gate.querySelector("[data-investor-gate-summary]");
   const noticePanel = gate.querySelector("[data-investor-gate-notice]");
   const noticeScroll = gate.querySelector("[data-investor-gate-scroll]");
+  const confirmHint = gate.querySelector("[data-investor-gate-confirm-hint]");
   const focusableSelector = [
     "a[href]",
     "button:not([disabled])",
@@ -206,7 +207,7 @@
     "[tabindex]:not([tabindex='-1'])",
   ].join(",");
 
-  if (!dialog || !confirmButton || !exitButton || !readButton || !summaryPanel || !noticePanel || !noticeScroll) {
+  if (!dialog || !confirmButton || !exitButton || !readButton || !summaryPanel || !noticePanel || !noticeScroll || !confirmHint) {
     return;
   }
 
@@ -236,11 +237,13 @@
   const disableConfirmation = () => {
     confirmButton.disabled = true;
     confirmButton.setAttribute("aria-disabled", "true");
+    confirmHint.hidden = false;
   };
 
   const enableConfirmation = () => {
     confirmButton.disabled = false;
     confirmButton.removeAttribute("aria-disabled");
+    confirmHint.hidden = true;
   };
 
   const hasReadNoticeToEnd = () => {

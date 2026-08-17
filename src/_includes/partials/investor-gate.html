@@ -31,7 +31,10 @@ tabindex="-1">
 </div>
 </div>
 <div class="investor-gate__actions">
-<button class="btn investor-gate__confirm" type="button" data-investor-gate-confirm disabled aria-disabled="true">I Confirm - Continue</button>
+<div class="investor-gate__confirm-group">
+<p class="investor-gate__confirm-hint" id="investor-gate-confirm-hint" data-investor-gate-confirm-hint role="status">Read the full Important Notice first to enable this button.</p>
+<button class="btn investor-gate__confirm" type="button" data-investor-gate-confirm disabled aria-disabled="true" aria-describedby="investor-gate-confirm-hint" title="Read the full Important Notice first to enable this button.">I Confirm - Continue</button>
+</div>
 <button class="investor-gate__exit" type="button" data-investor-gate-exit>Exit Website</button>
 </div>
 </div>

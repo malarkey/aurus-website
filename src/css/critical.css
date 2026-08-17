@@ -840,8 +840,37 @@ text-transform: none; }
 outline: var(--border-width-r) solid var(--color-border);
 outline-offset: 3px; }
 
+.investor-gate__confirm-group {
+display: grid;
+flex: 1 1 15rem;
+gap: var(--spacing-s); }
+
+.investor-gate__confirm-hint {
+background-color: var(--color-background-alt);
+border-radius: var(--border-radius-r);
+color: var(--color-text-alt);
+font-size: var(--font-size-xs);
+justify-self: center;
+margin-block: 0;
+max-inline-size: 30ch;
+padding: var(--spacing-xs) var(--spacing-s);
+position: relative;
+text-align: center; }
+
+.investor-gate__confirm-hint::after {
+border: .45rem solid transparent;
+border-block-start-color: var(--color-background-alt);
+content: "";
+inset-block-end: -.85rem;
+inset-inline-start: 50%;
+position: absolute;
+translate: -50% 0; }
+
+.investor-gate__confirm-hint[hidden] {
+display: none; }
+
 .investor-gate__confirm {
-flex: 1 1 15rem; }
+inline-size: 100%; }
 
 .investor-gate__confirm:disabled {
 cursor: not-allowed;
@@ -896,6 +925,7 @@ gap: var(--spacing-r); }
 .investor-gate__actions {
 display: grid; }
 
+.investor-gate__confirm-group,
 .investor-gate__confirm,
 .investor-gate__exit {
 inline-size: 100%; }
