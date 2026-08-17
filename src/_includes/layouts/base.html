@@ -31,7 +31,9 @@
 {% endblock %}
 
 {% include "partials/footer.html" %}
+{% if not disableInvestorGate %}
 {% include "partials/investor-gate.html" %}
+{% endif %}
 <script src="{{ site.assetPath }}/js/scripts.js"></script>
 </body>
 
