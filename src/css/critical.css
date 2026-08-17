@@ -823,11 +823,11 @@ max-inline-size: none; }
 font-size: var(--font-size-xs); }
 
 .investor-gate__actions {
-align-items: stretch;
+align-items: end;
 border-block-start: 1px solid color-mix(in oklch, var(--color-border) 45%, transparent);
-display: flex;
-flex-wrap: wrap;
+display: grid;
 gap: var(--spacing-s);
+grid-template-columns: repeat(2, minmax(0, 1fr));
 padding-block-start: var(--spacing-r); }
 
 .investor-gate__actions button {
@@ -842,7 +842,6 @@ outline-offset: 3px; }
 
 .investor-gate__confirm-group {
 display: grid;
-flex: 1 1 15rem;
 gap: var(--spacing-s); }
 
 .investor-gate__confirm-hint {
@@ -881,7 +880,7 @@ scale: 1; }
 background-color: transparent;
 border: var(--border-width-r) solid var(--color-border);
 color: var(--color-text-default);
-flex: 1 1 10rem; }
+inline-size: 100%; }
 
 .investor-gate__exit:hover,
 .investor-gate__exit:focus-visible {
@@ -923,7 +922,7 @@ inline-size: 100%; }
 gap: var(--spacing-r); }
 
 .investor-gate__actions {
-display: grid; }
+grid-template-columns: 1fr; }
 
 .investor-gate__confirm-group,
 .investor-gate__confirm,
