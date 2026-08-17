@@ -236,20 +236,21 @@
   let gatedSiblings = [];
   let hasOpenedNotice = false;
   let hasScrolledNotice = false;
+  let hasCompletedNotice = false;
   const scrollEndTolerance = 4;
 
   const disableConfirmation = () => {
     confirmButton.disabled = true;
     confirmButton.setAttribute("aria-disabled", "true");
     confirmButton.setAttribute("title", "Read the full Important Notice first to enable this button.");
-    confirmHint.hidden = false;
+    confirmHint.textContent = "Read the full Important Notice first to enable this button.";
   };
 
   const enableConfirmation = () => {
     confirmButton.disabled = false;
     confirmButton.removeAttribute("aria-disabled");
     confirmButton.removeAttribute("title");
-    confirmHint.hidden = true;
+    confirmHint.textContent = "Important Notice read. You can now continue.";
   };
 
   const hasContainerReachedEnd = (container) => {
@@ -273,6 +274,10 @@
     }
 
     if (hasScrolledNotice && hasReadNoticeToEnd()) {
+      hasCompletedNotice = true;
+    }
+
+    if (hasCompletedNotice) {
       enableConfirmation();
       return;
     }
@@ -303,6 +308,7 @@
     gate.setAttribute("data-investor-gate-reading", "true");
     hasOpenedNotice = true;
     hasScrolledNotice = false;
+    hasCompletedNotice = false;
     disableConfirmation();
     resetNoticePosition();
 
@@ -418,6 +424,7 @@
     document.addEventListener("keydown", handleKeydown, true);
     hasOpenedNotice = false;
     hasScrolledNotice = false;
+    hasCompletedNotice = false;
     gate.removeAttribute("data-investor-gate-reading");
     disableConfirmation();
 
@@ -433,7 +440,7 @@
   noticeScroll.addEventListener("keyup", handleNoticeProgress);
 
   confirmButton.addEventListener("click", () => {
-    if (confirmButton.disabled || !hasOpenedNotice || !hasScrolledNotice || !hasReadNoticeToEnd()) {
+    if (confirmButton.disabled || !hasOpenedNotice || !hasCompletedNotice) {
       disableConfirmation();
       return;
     }
