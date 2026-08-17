@@ -695,12 +695,13 @@ z-index: var(--z-modal-backdrop); }
 background-color: var(--color-background-default);
 border-block-start: var(--border-width-l) solid var(--color-border);
 border-radius: var(--border-radius-l);
+block-size: min(calc(100dvh - 2rem), 46rem);
 box-shadow: 0 8px 8px color-mix(in oklch, #000 22%, transparent);
 box-sizing: border-box;
 color: var(--color-text-default);
 inline-size: min(100%, 42rem);
 max-block-size: calc(100dvh - 2rem);
-overflow: auto;
+overflow: hidden;
 position: relative;
 z-index: var(--z-modal); }
 
@@ -708,13 +709,20 @@ z-index: var(--z-modal); }
 outline: none; }
 
 .investor-gate__content {
+block-size: 100%;
+box-sizing: border-box;
 display: grid;
 gap: var(--spacing-m);
+grid-template-rows: auto minmax(0, 1fr) auto;
 padding: clamp(1.5rem, 1.0435rem + 2.2826vi, 2.8125rem); }
 
 .investor-gate__header,
 .investor-gate__body {
 margin-trim: block; }
+
+.investor-gate__body {
+min-block-size: 0;
+overflow: auto; }
 
 .investor-gate__header {
 border-block-end: 1px solid color-mix(in oklch, var(--color-border) 42%, transparent);
@@ -792,7 +800,9 @@ display: none; }
 
 .investor-gate__notice {
 display: grid;
-gap: var(--spacing-r); }
+gap: var(--spacing-r);
+grid-template-rows: auto minmax(0, 1fr);
+min-block-size: 100%; }
 
 .investor-gate__notice-instruction {
 font-weight: var(--font-weight-bd);
@@ -802,7 +812,7 @@ margin-block-end: 0; }
 border: 1px solid color-mix(in oklch, var(--color-border) 54%, transparent);
 border-radius: var(--border-radius-r);
 box-sizing: border-box;
-max-block-size: min(52dvh, 30rem);
+min-block-size: 0;
 overflow: auto;
 padding: var(--spacing-r); }
 
@@ -916,6 +926,7 @@ align-items: start;
 padding-block: var(--spacing-r); }
 
 .investor-gate__dialog {
+block-size: calc(100dvh - (var(--spacing-r) * 2));
 inline-size: 100%; }
 
 .investor-gate__content {

@@ -260,6 +260,7 @@
     summaryPanel.hidden = true;
     noticePanel.hidden = false;
     disableConfirmation();
+    noticeScroll.scrollTop = 0;
 
     window.requestAnimationFrame(() => {
       noticeScroll.focus();
