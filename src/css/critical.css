@@ -762,6 +762,66 @@ border-radius: var(--border-radius-r);
 margin-block-end: 0;
 padding: var(--spacing-s) var(--spacing-r); }
 
+.investor-gate__notice-trigger {
+align-items: center;
+background-color: transparent;
+border: var(--border-width-r) solid var(--color-border);
+border-radius: var(--border-radius-r);
+color: var(--color-text-default);
+display: inline-flex;
+font-weight: var(--font-weight-bd);
+inline-size: min(100%, 18rem);
+justify-content: center;
+margin-block: var(--spacing-r) 0;
+margin-inline: auto;
+min-block-size: 2.75rem;
+padding-inline: var(--spacing-r);
+text-align: center;
+text-transform: none; }
+
+.investor-gate__notice-trigger:hover,
+.investor-gate__notice-trigger:focus-visible {
+background-color: color-mix(in oklch, var(--color-border) 14%, transparent);
+color: var(--color-text-default);
+outline: var(--border-width-r) solid var(--color-border);
+outline-offset: 3px;
+scale: var(--scale-down); }
+
+.investor-gate__notice[hidden] {
+display: none; }
+
+.investor-gate__notice {
+display: grid;
+gap: var(--spacing-r); }
+
+.investor-gate__notice-instruction {
+font-weight: var(--font-weight-bd);
+margin-block-end: 0; }
+
+.investor-gate__notice-scroll {
+border: 1px solid color-mix(in oklch, var(--color-border) 54%, transparent);
+border-radius: var(--border-radius-r);
+box-sizing: border-box;
+max-block-size: min(52dvh, 30rem);
+overflow: auto;
+padding: var(--spacing-r); }
+
+.investor-gate__notice-scroll:focus {
+outline: var(--border-width-r) solid var(--color-border);
+outline-offset: 3px; }
+
+.investor-gate .important-notice-content h2 {
+font-size: var(--font-size-r);
+margin-block-start: var(--spacing-r); }
+
+.investor-gate .important-notice-content p,
+.investor-gate .important-notice-content li {
+font-size: var(--font-size-xs);
+max-inline-size: none; }
+
+.investor-gate .important-notice-content ul {
+font-size: var(--font-size-xs); }
+
 .investor-gate__actions {
 align-items: stretch;
 border-block-start: 1px solid color-mix(in oklch, var(--color-border) 45%, transparent);
@@ -782,6 +842,11 @@ outline-offset: 3px; }
 
 .investor-gate__confirm {
 flex: 1 1 15rem; }
+
+.investor-gate__confirm:disabled {
+cursor: not-allowed;
+opacity: .5;
+scale: 1; }
 
 .investor-gate__exit {
 background-color: transparent;
@@ -833,6 +898,9 @@ display: grid; }
 
 .investor-gate__confirm,
 .investor-gate__exit {
+inline-size: 100%; }
+
+.investor-gate__notice-trigger {
 inline-size: 100%; }
 }
 

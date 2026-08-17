@@ -13,6 +13,7 @@ tabindex="-1">
 <h2>Before you continue</h2>
 </header>
 <div class="investor-gate__body" id="investor-gate-description">
+<div data-investor-gate-summary>
 <p>Investments featured on this website are intended only for <strong>High Net Worth</strong> or <strong>Sophisticated Investors</strong> as defined by the Financial Conduct Authority.</p>
 <p>By continuing you confirm that:</p>
 <ul class="investor-gate__checks">
@@ -20,10 +21,17 @@ tabindex="-1">
 <li>You are visiting the site to obtain general information and understand that investment opportunities may not be suitable for all investors.</li>
 </ul>
 <p class="investor-gate__risk"><strong>All investments carry risk and your capital is at risk.</strong></p>
-<p><a href="/important-notice/">Read the full Important Notice</a></p>
+<button class="investor-gate__notice-trigger" type="button" data-investor-gate-read>Read the full Important Notice</button>
+</div>
+<div class="investor-gate__notice" data-investor-gate-notice hidden>
+<p class="investor-gate__notice-instruction" id="investor-gate-notice-instruction">Please read the full Important Notice. The confirm button will become available when you reach the end.</p>
+<div class="investor-gate__notice-scroll" data-investor-gate-scroll tabindex="0" aria-describedby="investor-gate-notice-instruction">
+{% include "partials/important-notice-content.html" %}
+</div>
+</div>
 </div>
 <div class="investor-gate__actions">
-<button class="btn investor-gate__confirm" type="button" data-investor-gate-confirm>I Confirm - Continue</button>
+<button class="btn investor-gate__confirm" type="button" data-investor-gate-confirm disabled aria-disabled="true">I Confirm - Continue</button>
 <button class="investor-gate__exit" type="button" data-investor-gate-exit>Exit Website</button>
 </div>
 </div>

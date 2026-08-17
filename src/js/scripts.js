@@ -193,6 +193,10 @@
   const dialog = gate.querySelector('[role="dialog"]');
   const confirmButton = gate.querySelector("[data-investor-gate-confirm]");
   const exitButton = gate.querySelector("[data-investor-gate-exit]");
+  const readButton = gate.querySelector("[data-investor-gate-read]");
+  const summaryPanel = gate.querySelector("[data-investor-gate-summary]");
+  const noticePanel = gate.querySelector("[data-investor-gate-notice]");
+  const noticeScroll = gate.querySelector("[data-investor-gate-scroll]");
   const focusableSelector = [
     "a[href]",
     "button:not([disabled])",
@@ -202,7 +206,7 @@
     "[tabindex]:not([tabindex='-1'])",
   ].join(",");
 
-  if (!dialog || !confirmButton || !exitButton) {
+  if (!dialog || !confirmButton || !exitButton || !readButton || !summaryPanel || !noticePanel || !noticeScroll) {
     return;
   }
 
@@ -228,6 +232,37 @@
 
   let previousFocus = null;
   let gatedSiblings = [];
+
+  const disableConfirmation = () => {
+    confirmButton.disabled = true;
+    confirmButton.setAttribute("aria-disabled", "true");
+  };
+
+  const enableConfirmation = () => {
+    confirmButton.disabled = false;
+    confirmButton.removeAttribute("aria-disabled");
+  };
+
+  const hasReadNoticeToEnd = () => {
+    return noticeScroll.scrollTop + noticeScroll.clientHeight >= noticeScroll.scrollHeight - 2;
+  };
+
+  const updateConfirmationAvailability = () => {
+    if (hasReadNoticeToEnd()) {
+      enableConfirmation();
+    }
+  };
+
+  const showNotice = () => {
+    summaryPanel.hidden = true;
+    noticePanel.hidden = false;
+    disableConfirmation();
+
+    window.requestAnimationFrame(() => {
+      noticeScroll.focus();
+      updateConfirmationAvailability();
+    });
+  };
 
   const getFocusableItems = () => {
     return Array.from(dialog.querySelectorAll(focusableSelector)).filter((item) => {
@@ -326,13 +361,21 @@
     document.body.classList.add("has-investor-gate");
     setPageInert(true);
     document.addEventListener("keydown", handleKeydown, true);
+    disableConfirmation();
 
     window.requestAnimationFrame(() => {
-      confirmButton.focus();
+      readButton.focus();
     });
   };
 
+  readButton.addEventListener("click", showNotice);
+  noticeScroll.addEventListener("scroll", updateConfirmationAvailability, { passive: true });
+
   confirmButton.addEventListener("click", () => {
+    if (confirmButton.disabled) {
+      return;
+    }
+
     writeConfirmation();
     closeGate();
   });
