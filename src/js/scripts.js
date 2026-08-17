@@ -198,6 +198,7 @@
   const summaryPanel = gate.querySelector("[data-investor-gate-summary]");
   const noticePanel = gate.querySelector("[data-investor-gate-notice]");
   const noticeScroll = gate.querySelector("[data-investor-gate-scroll]");
+  const noticeEndMarker = gate.querySelector("[data-investor-gate-notice-end]");
   const confirmHint = gate.querySelector("[data-investor-gate-confirm-hint]");
   const focusableSelector = [
     "a[href]",
@@ -208,7 +209,7 @@
     "[tabindex]:not([tabindex='-1'])",
   ].join(",");
 
-  if (!dialog || !confirmButton || !exitButton || !readButton || !bodyPanel || !summaryPanel || !noticePanel || !noticeScroll || !confirmHint) {
+  if (!dialog || !confirmButton || !exitButton || !readButton || !bodyPanel || !summaryPanel || !noticePanel || !noticeScroll || !noticeEndMarker || !confirmHint) {
     return;
   }
 
@@ -252,9 +253,33 @@
     confirmHint.hidden = true;
   };
 
+  const hasContainerReachedEnd = (container) => {
+    const maxScrollTop = Math.max(0, container.scrollHeight - container.clientHeight);
+
+    if (maxScrollTop <= scrollEndTolerance) {
+      return false;
+    }
+
+    return Math.ceil(container.scrollTop) >= maxScrollTop - scrollEndTolerance;
+  };
+
+  const isNoticeEndVisible = () => {
+    const noticeScrollRect = noticeScroll.getBoundingClientRect();
+    const bodyPanelRect = bodyPanel.getBoundingClientRect();
+    const noticeEndRect = noticeEndMarker.getBoundingClientRect();
+
+    return (
+      noticeEndRect.bottom <= noticeScrollRect.bottom + scrollEndTolerance ||
+      noticeEndRect.bottom <= bodyPanelRect.bottom + scrollEndTolerance
+    );
+  };
+
   const hasReadNoticeToEnd = () => {
-    const scrolledAmount = Math.ceil(noticeScroll.scrollTop + noticeScroll.clientHeight);
-    return scrolledAmount >= noticeScroll.scrollHeight - scrollEndTolerance;
+    return (
+      hasContainerReachedEnd(noticeScroll) ||
+      hasContainerReachedEnd(bodyPanel) ||
+      isNoticeEndVisible()
+    );
   };
 
   const updateConfirmationAvailability = () => {
@@ -272,11 +297,13 @@
   };
 
   const handleNoticeScroll = () => {
-    if (noticeScroll.scrollTop > 0) {
-      hasScrolledNotice = true;
-    }
+    hasScrolledNotice = true;
 
     updateConfirmationAvailability();
+  };
+
+  const handleNoticeProgress = () => {
+    window.requestAnimationFrame(updateConfirmationAvailability);
   };
 
   const resetNoticePosition = () => {
@@ -412,6 +439,10 @@
 
   readButton.addEventListener("click", showNotice);
   noticeScroll.addEventListener("scroll", handleNoticeScroll, { passive: true });
+  bodyPanel.addEventListener("scroll", handleNoticeScroll, { passive: true });
+  noticeScroll.addEventListener("wheel", handleNoticeProgress, { passive: true });
+  noticeScroll.addEventListener("touchmove", handleNoticeProgress, { passive: true });
+  noticeScroll.addEventListener("keyup", handleNoticeProgress);
 
   confirmButton.addEventListener("click", () => {
     if (confirmButton.disabled || !hasOpenedNotice || !hasScrolledNotice || !hasReadNoticeToEnd()) {

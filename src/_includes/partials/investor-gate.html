@@ -27,12 +27,13 @@ tabindex="-1">
 <p class="investor-gate__notice-instruction" id="investor-gate-notice-instruction">Please read the full Important Notice. The confirm button will become available when you reach the end.</p>
 <div class="investor-gate__notice-scroll" data-investor-gate-scroll tabindex="0" aria-describedby="investor-gate-notice-instruction">
 {% include "partials/important-notice-content.html" %}
+<span class="investor-gate__notice-end" data-investor-gate-notice-end aria-hidden="true"></span>
 </div>
 </div>
 </div>
 <div class="investor-gate__actions">
-<div class="investor-gate__confirm-group">
 <p class="investor-gate__confirm-hint" id="investor-gate-confirm-hint" data-investor-gate-confirm-hint role="status">Read the full Important Notice first to enable this button.</p>
+<div class="investor-gate__confirm-group">
 <button class="btn investor-gate__confirm" type="button" data-investor-gate-confirm disabled aria-disabled="true" aria-describedby="investor-gate-confirm-hint" title="Read the full Important Notice first to enable this button.">I Confirm - Continue</button>
 </div>
 <button class="investor-gate__exit" type="button" data-investor-gate-exit>Exit Website</button>
