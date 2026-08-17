@@ -194,6 +194,7 @@
   const confirmButton = gate.querySelector("[data-investor-gate-confirm]");
   const exitButton = gate.querySelector("[data-investor-gate-exit]");
   const readButton = gate.querySelector("[data-investor-gate-read]");
+  const bodyPanel = gate.querySelector(".investor-gate__body");
   const summaryPanel = gate.querySelector("[data-investor-gate-summary]");
   const noticePanel = gate.querySelector("[data-investor-gate-notice]");
   const noticeScroll = gate.querySelector("[data-investor-gate-scroll]");
@@ -207,7 +208,7 @@
     "[tabindex]:not([tabindex='-1'])",
   ].join(",");
 
-  if (!dialog || !confirmButton || !exitButton || !readButton || !summaryPanel || !noticePanel || !noticeScroll || !confirmHint) {
+  if (!dialog || !confirmButton || !exitButton || !readButton || !bodyPanel || !summaryPanel || !noticePanel || !noticeScroll || !confirmHint) {
     return;
   }
 
@@ -233,37 +234,72 @@
 
   let previousFocus = null;
   let gatedSiblings = [];
+  let hasOpenedNotice = false;
+  let hasScrolledNotice = false;
+  const scrollEndTolerance = 16;
 
   const disableConfirmation = () => {
     confirmButton.disabled = true;
     confirmButton.setAttribute("aria-disabled", "true");
+    confirmButton.setAttribute("title", "Read the full Important Notice first to enable this button.");
     confirmHint.hidden = false;
   };
 
   const enableConfirmation = () => {
     confirmButton.disabled = false;
     confirmButton.removeAttribute("aria-disabled");
+    confirmButton.removeAttribute("title");
     confirmHint.hidden = true;
   };
 
   const hasReadNoticeToEnd = () => {
-    return noticeScroll.scrollTop + noticeScroll.clientHeight >= noticeScroll.scrollHeight - 2;
+    const scrolledAmount = Math.ceil(noticeScroll.scrollTop + noticeScroll.clientHeight);
+    return scrolledAmount >= noticeScroll.scrollHeight - scrollEndTolerance;
   };
 
   const updateConfirmationAvailability = () => {
-    if (hasReadNoticeToEnd()) {
-      enableConfirmation();
+    if (!hasOpenedNotice) {
+      disableConfirmation();
+      return;
     }
+
+    if (hasScrolledNotice && hasReadNoticeToEnd()) {
+      enableConfirmation();
+      return;
+    }
+
+    disableConfirmation();
+  };
+
+  const handleNoticeScroll = () => {
+    if (noticeScroll.scrollTop > 0) {
+      hasScrolledNotice = true;
+    }
+
+    updateConfirmationAvailability();
+  };
+
+  const resetNoticePosition = () => {
+    bodyPanel.scrollTop = 0;
+    noticeScroll.scrollTop = 0;
   };
 
   const showNotice = () => {
     summaryPanel.hidden = true;
     noticePanel.hidden = false;
+    hasOpenedNotice = true;
+    hasScrolledNotice = false;
     disableConfirmation();
-    noticeScroll.scrollTop = 0;
+    resetNoticePosition();
 
     window.requestAnimationFrame(() => {
-      noticeScroll.focus();
+      try {
+        noticeScroll.focus({ preventScroll: true });
+      } catch (error) {
+        noticeScroll.focus();
+      }
+
+      resetNoticePosition();
       updateConfirmationAvailability();
     });
   };
@@ -365,6 +401,8 @@
     document.body.classList.add("has-investor-gate");
     setPageInert(true);
     document.addEventListener("keydown", handleKeydown, true);
+    hasOpenedNotice = false;
+    hasScrolledNotice = false;
     disableConfirmation();
 
     window.requestAnimationFrame(() => {
@@ -373,10 +411,11 @@
   };
 
   readButton.addEventListener("click", showNotice);
-  noticeScroll.addEventListener("scroll", updateConfirmationAvailability, { passive: true });
+  noticeScroll.addEventListener("scroll", handleNoticeScroll, { passive: true });
 
   confirmButton.addEventListener("click", () => {
-    if (confirmButton.disabled) {
+    if (confirmButton.disabled || !hasOpenedNotice || !hasScrolledNotice || !hasReadNoticeToEnd()) {
+      disableConfirmation();
       return;
     }
 

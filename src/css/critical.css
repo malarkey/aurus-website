@@ -881,9 +881,13 @@ display: none; }
 .investor-gate__confirm {
 inline-size: 100%; }
 
-.investor-gate__confirm:disabled {
+.investor-gate__confirm:disabled,
+.investor-gate__confirm[aria-disabled="true"] {
+background-color: color-mix(in oklch, var(--color-text-default) 32%, var(--color-background-default));
+color: var(--color-text-alt);
 cursor: not-allowed;
-opacity: .5;
+opacity: 1;
+pointer-events: none;
 scale: 1; }
 
 .investor-gate__exit {
